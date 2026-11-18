@@ -5,7 +5,22 @@ SRM.splitChars = function (el) {
   if (window.SplitText) {
     try {
       gsap.registerPlugin(window.SplitText);
-      var split = window.SplitText.create(el, { type: 'words,chars', mask: 'words', wordsClass: 'split-word', charsClass: 'split-char' });
+      // wordDelimiter jen obyčejná mezera – pevná mezera (a\u00A0DFSK) drží slova pohromadě
+      var split = window.SplitText.create(el, { type: 'words,chars', mask: 'words', wordsClass: 'split-word', charsClass: 'split-char', wordDelimiter: ' ' });
+      // jednopísmenné předložky a spojky (cs/sk) držet na řádku s dalším slovem – SplitText z nich udělá
+      // samostatné bloky, mezi kterými by prohlížeč zalomil i přes pevnou mezeru
+      if (/^(cs|sk)$/.test(document.documentElement.lang)) {
+        Array.prototype.slice.call(el.querySelectorAll('.split-word-mask')).forEach(function (mask) {
+          var next = mask.nextSibling;
+          var word = next && next.nextSibling;
+          if (!/^[vkszouai]$/i.test(mask.textContent.trim()) || !next || next.nodeType !== 3 || !word || word.nodeType !== 1) return;
+          var keep = document.createElement('span');
+          keep.style.whiteSpace = 'nowrap';
+          mask.parentNode.insertBefore(keep, mask);
+          next.nodeValue = '\u00A0';
+          keep.appendChild(mask); keep.appendChild(next); keep.appendChild(word);
+        });
+      }
       return split.chars;
     } catch (e) { /* fallback níže */ }
   }
