@@ -18,6 +18,12 @@ node build.js --staging          # build pro testovací doménu: noindex + robot
 ```
 Totéž přes npm: `npm run build`, `npm run serve`, `npm run check`, `npm run staging`.
 
+**Náhled pro klienta: https://jansloupensky.github.io/Silkroutemobility/**
+- Po každém `git push` do větve `main` ho GitHub sám sestaví a zveřejní (`.github/workflows/pages.yml`). Trvá to asi minutu, průběh je v záložce *Actions*.
+- Běží v testovacím režimu (noindex), takže ho vyhledávače neindexují.
+- Protože běží v podsložce, build ho sestavuje s `--base=/Silkroutemobility`. Ostrý web se sestavuje bez `--base`.
+- Repozitář je kvůli Pages veřejný (bezplatný plán GitHubu neumí Pages ze soukromého repozitáře). Veřejný je tedy i zdrojový kód a fotky.
+
 **Na hosting přes FTP nahrajte celý obsah složky `dist/`** do kořene webu (tam, kde byl WordPress):
 
 - `dist/index.html`, `rox.html`, `dfsk.html`, `kontakt.html`, `404.html`, `ochrana-osobnich-udaju.html`

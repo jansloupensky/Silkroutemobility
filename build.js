@@ -16,6 +16,8 @@ const crypto = require('crypto');
 
 const ROOT = __dirname;
 const ARGS = new Set(process.argv.slice(2));
+// --base=/Cesta: web poběží v podsložce (např. GitHub Pages: /Silkroutemobility). Ostrý web bez --base.
+const BASE = (process.argv.find((a) => a.startsWith('--base=')) || '').slice(7).replace(/\/$/, '');
 // --staging: testovací nasazení (noindex, robots zakáže vše); --keep-comments: ponechat HTML komentáře
 const SRC = path.join(ROOT, 'src');
 const DIST = path.join(ROOT, 'dist');
@@ -49,7 +51,23 @@ function mkdirp(p) { fs.mkdirSync(p, { recursive: true }); }
 // Soubory vytvořené tímto buildem. Na konci se z dist/ smaže vše ostatní
 // (staré verze s hashem, konfliktní kopie z iCloudu typu „index 2.html“ apod.).
 const produced = new Set();
+// Při --base přepíše kořenové cesty (/assets/…, /sk/, /) na /<base>/…
+function withBase(rel, content) {
+  if (!BASE || typeof content !== 'string') return content;
+  const ext = path.extname(rel);
+  if (ext === '.html') {
+    content = content
+      .replace(/(\s(?:href|src|poster|action|data-[a-z-]+))="\/(?!\/)/g, `$1="${BASE}/`)
+      .replace(/(srcset="[^"]*)/g, (m) => m.replace(/(^srcset="|,\s*)\/(?!\/)/g, `$1${BASE}/`));
+  } else if (ext === '.css') {
+    content = content.replace(/url\(\/(?!\/)/g, `url(${BASE}/`);
+  } else if (ext === '.webmanifest') {
+    content = content.replace(/("(?:src|start_url)":\s*")\/(?!\/)/g, `$1${BASE}/`);
+  }
+  return content;
+}
 function write(rel, content) {
+  content = withBase(rel, Buffer.isBuffer(content) && /\.(html|css|webmanifest)$/.test(rel) ? content.toString() : content);
   const out = path.join(DIST, rel);
   mkdirp(path.dirname(out));
   // nepřepisovat beze změny – méně zápisů = méně konfliktů při synchronizaci (iCloud, Dropbox)
