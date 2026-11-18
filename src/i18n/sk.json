@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "lang": "sk",
+    "locale": "sk_SK",
+    "label": "SK",
+    "name": "Slovenčina",
+    "siteName": "Silk Route Mobility"
+  },
+  "pages": {
+    "index": {
+      "title": "Silk Route Mobility – oficiálny importér ROX a DFSK",
+      "description": "Oficiálny importér ROX a DFSK pre Česko a Slovensko. Predaj nových vozidiel ROX a DFSK, servis a pneuservis pre všetky značky."
+    },
+    "rox": {
+      "title": "ROX – terénne SUV | Silk Route Mobility",
+      "description": "ROX ADAMAS a ROX 01: veľké terénne SUV na dlhé cesty. Technické údaje, ceny a obhliadka v showroome Silk Route Mobility."
+    },
+    "dfsk": {
+      "title": "DFSK – SUV s päťročnou zárukou | Silk Route Mobility",
+      "description": "DFSK 500, DFSK 600 a plug-in hybrid DFSK E5. Praktické SUV s päťročnou zárukou. Ceny od, technické údaje a showroom."
+    },
+    "kontakt": {
+      "title": "Kontakt – showroom a servis | Silk Route Mobility",
+      "description": "Telefón, e-mail, adresa a otváracie hodiny showroomu, servisu a pneuservisu Silk Route Mobility."
+    },
+    "privacy": {
+      "title": "Ochrana osobných údajov | Silk Route Mobility",
+      "description": "Ako Silk Route Mobility narába s osobnými údajmi. Web nepoužíva cookies ani analytiku."
+    },
+    "404": {
+      "title": "Stránka sa nenašla | Silk Route Mobility",
+      "description": "Táto stránka neexistuje."
+    }
+  },
+  "nav": {
+    "skip": "Preskočiť na obsah",
+    "home": "Silk Route Mobility – úvod",
+    "showroom": "Showroom",
+    "service": "Servis",
+    "contact": "Kontakt",
+    "menu": "Menu",
+    "openMenu": "Otvoriť menu",
+    "closeMenu": "Zavrieť menu",
+    "close": "Zavrieť",
+    "language": "Jazyk",
+    "mainNav": "Hlavná navigácia",
+    "call": "Zavolať"
+  },
+  "common": {
+    "priceFrom": "od",
+    "currency": "€",
+    "priceSoon": "Cena čoskoro",
+    "priceNote": "Ceny sú orientačné, vrátane DPH.",
+    "tbc": "upresníme",
+    "modelDetail": "Detail modelu",
+    "view": "Pozrieť",
+    "drag": "Ťahajte",
+    "phone": "Telefón",
+    "email": "E-mail",
+    "address": "Adresa",
+    "ico": "IČO",
+    "hours": "Otváracie hodiny",
+    "hoursShowroom": "Showroom",
+    "hoursService": "Servis a pneuservis",
+    "openGoogle": "Otvoriť v Google Maps",
+    "openMapy": "Otvoriť v Mapy.cz",
+    "mapAlt": "Štylizovaná mapa s polohou showroomu",
+    "backHome": "Späť na úvod",
+    "toTop": "Hore",
+    "photo": "foto",
+    "of": "z",
+    "prev": "Predchádzajúca",
+    "next": "Ďalšia",
+    "years": {
+      "one": "rok",
+      "few": "roky",
+      "many": "rokov"
+    },
+    "days": {
+      "Mo": "Po",
+      "Tu": "Ut",
+      "We": "St",
+      "Th": "Št",
+      "Fr": "Pi",
+      "Sa": "So",
+      "Su": "Ne"
+    },
+    "closed": "zatvorené",
+    "currencyEur": "€",
+    "loading": "Načítava sa",
+    "position": "Pozícia",
+    "officialImporter": "oficiálny importér",
+    "illustrative": "Ilustračné foto"
+  },
+  "powertrain": {
+    "petrol": "benzín",
+    "phev": "plug-in hybrid",
+    "TODO": "upresníme",
+    "erev": "elektromobil s range extenderom"
+  },
+  "specs": {
+    "powertrain": "Pohon",
+    "power": "Výkon",
+    "torque": "Krútiaci moment",
+    "drive": "Pohon kolies",
+    "consumption": "Spotreba",
+    "range": "Dojazd",
+    "consumptionRange": "Spotreba / dojazd",
+    "dimensions": "Rozmery (d × š × v)",
+    "wheelbase": "Rázvor",
+    "seats": "Počet miest",
+    "warranty": "Záruka",
+    "priceFrom": "Cena od",
+    "tableCaption": "Technické údaje",
+    "battery": "Batéria",
+    "acceleration": "Zrýchlenie 0–100 km/h",
+    "transmission": "Prevodovka",
+    "engine": "Motor"
+  },
+  "home": {
+    "hero": {
+      "title": "Oficiálny importér ROX a DFSK",
+      "sub": "Predaj nových vozidiel ROX a DFSK. Servis a pneuservis pre autá všetkých značiek."
+    },
+    "about": {
+      "label": "O nás",
+      "title": "Predaj, servis a pneuservis na jednom mieste",
+      "text": "Silk Route Mobility je oficiálny importér značiek ROX a DFSK pre Českú republiku a Slovensko. Nové vozidlá oboch značiek predávame vo vlastnom showroome. V servise a pneuservise sa staráme o autá všetkých značiek, pri ROX a DFSK vrátane záručných prehliadok a originálnych dielov."
+    },
+    "showroom": {
+      "label": "Showroom",
+      "title": "V showroome si autá pozriete zblízka",
+      "text": "V showroome stoja vozidlá oboch značiek. Otvorte dvere, vyskúšajte sedadlá, sklopte zadný rad. Prejdeme s vami výbavu aj ceny a odpovieme na všetko, čo vás zaujíma."
+    },
+    "service": {
+      "label": "Servis",
+      "title": "Servis pre všetky značky",
+      "intro": "Opravujeme a udržiavame autá všetkých značiek. Pri ROX a DFSK robíme aj záručný servis podľa predpisu výrobcu.",
+      "phoneLabel": "Objednanie do servisu",
+      "rows": [
+        {
+          "id": "warranty",
+          "name": "Záručný servis ROX a DFSK",
+          "text": "Prehliadky a opravy podľa predpisu výrobcu, aby záruka zostala platná."
+        },
+        {
+          "id": "maintenance",
+          "name": "Servis všetkých značiek",
+          "text": "Pravidelná údržba, výmena oleja, brzdy a opravy. Bez ohľadu na značku auta."
+        },
+        {
+          "id": "diagnostics",
+          "name": "Diagnostika",
+          "text": "Načítanie a vyhodnotenie chýb riadiacich jednotiek."
+        },
+        {
+          "id": "parts",
+          "name": "Originálne diely",
+          "text": "Pre ROX a DFSK diely priamo od výrobcu."
+        },
+        {
+          "id": "assistance",
+          "name": "Asistencia 24/7",
+          "text": "Pre vozidlá ROX a DFSK: keď auto na ceste nepôjde, pomôžeme. Cez deň aj v noci."
+        }
+      ]
+    },
+    "tyres": {
+      "label": "Pneuservis",
+      "title": "Kolesá pripravené na každú sezónu",
+      "intro": "Prezujeme, vyvážime a nastavíme autá všetkých značiek.",
+      "phoneLabel": "Objednanie do pneuservisu",
+      "rows": [
+        {
+          "id": "change",
+          "name": "Prezutie",
+          "text": "Sezónna výmena kolies alebo pneumatík na diskoch."
+        },
+        {
+          "id": "storage",
+          "name": "Uskladnenie",
+          "text": "Vaše kolesá uskladníme do ďalšej sezóny."
+        },
+        {
+          "id": "balance",
+          "name": "Vyváženie",
+          "text": "Aby volant pri vyššej rýchlosti nevibroval."
+        },
+        {
+          "id": "geometry",
+          "name": "Geometria",
+          "text": "Nastavenie náprav. Auto drží stopu a pneumatiky sa zjazdia rovnomerne."
+        }
+      ]
+    },
+    "contact": {
+      "label": "Kontakt",
+      "title": "Ako sa s nami spojiť",
+      "lead": "Radi vám autá ukážeme naživo."
+    },
+    "brandSec": {
+      "cta": "Všetko o značke",
+      "modelsTitle": "Modely"
+    }
+  },
+  "brand": {
+    "storyLabel": "Príbeh",
+    "modelsLabel": "Modely",
+    "galleryLabel": "Galéria",
+    "ctaTitle": "Príďte sa pozrieť do showroomu",
+    "ctaText": "Autá si u nás pozriete naživo. Zavolajte, nech vás čakáme.",
+    "rox": {
+      "title": "ROX",
+      "sub": "Terénne SUV na dlhé cesty.",
+      "story": [
+        "ROX stavia veľké SUV pre ľudí, ktorí cestujú. Nie na cestu do obchodu, ale na trasy, kde sa cesta mení na štrk a štrk na brod.",
+        "Autá ROX pôsobia hranato, robustne a pokojne. Vnútri ponúkajú priestor a pohodlie na celodenné presuny.",
+        "Do Česka a na Slovensko ich dováža Silk Route Mobility. Predaj, servis aj náhradné diely zabezpečujeme sami."
+      ],
+      "models": {
+        "adamas": "Terénne SUV stavané na výpravy.",
+        "01": "Veľké SUV pre rodinu a dlhé trasy."
+      }
+    },
+    "dfsk": {
+      "title": "DFSK",
+      "sub": "Praktické SUV s päťročnou zárukou.",
+      "story": [
+        "DFSK robí autá na každý deň. Priestranné, rozumne nacenené a so zárukou na päť rokov.",
+        "Vyberať môžete z dvoch benzínových SUV a plug-in hybridu E5, ktorý kratšie trasy zvládne len na elektrinu.",
+        "Predaj, servis aj diely pre DFSK zabezpečuje Silk Route Mobility ako oficiálny importér."
+      ],
+      "models": {
+        "500": "SUV do mesta aj na víkend za mestom.",
+        "600": "SUV pre rodinu a dlhšie cesty.",
+        "e5": "Plug-in hybrid. Krátke trasy na elektrinu, dlhé s benzínom."
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Kontakt",
+    "lead": "Showroom, servis aj pneuservis nájdete na jednej adrese.",
+    "sales": "Predaj a showroom",
+    "service": "Servis a pneuservis",
+    "company": "Firma",
+    "where": "Kde nás nájdete"
+  },
+  "privacy": {
+    "title": "Ochrana osobných údajov",
+    "updated": "Platné od novembra 2026",
+    "sections": [
+      {
+        "h": "Žiadne cookies, žiadna analytika",
+        "p": "Tento web nepoužíva cookies, analytické nástroje, reklamné siete ani vložený obsah tretích strán. Neobsahuje žiadne formuláre. Pri prehliadaní webu o vás nič nezbierame."
+      },
+      {
+        "h": "Prevádzkové záznamy servera",
+        "p": "Server, na ktorom web beží, môže zapisovať technické záznamy o prístupoch (IP adresa, čas, požadovaná stránka). Slúžia len na zabezpečenie prevádzky a bezpečnosti a po krátkom čase sa mažú."
+      },
+      {
+        "h": "Keď nás kontaktujete",
+        "p": "Ak nám zavoláte alebo napíšete e-mail, použijeme vaše meno a kontakt len na vybavenie vašej otázky. Údaje neposkytujeme ďalším stranám a uchovávame ich len nevyhnutne dlho."
+      },
+      {
+        "h": "Vaše práva",
+        "p": "Máte právo na prístup k svojim údajom, ich opravu alebo vymazanie a právo namietať. Sťažnosť môžete podať na Úrade na ochranu osobných údajov SR (dataprotection.gov.sk) alebo na českom Úřade pro ochranu osobních údajů (uoou.gov.cz)."
+      },
+      {
+        "h": "Prevádzkovateľ",
+        "p": "Prevádzkovateľom je {company}, IČO {ico}, {address}. Kontakt: {email}."
+      }
+    ]
+  },
+  "notFound": {
+    "label": "404",
+    "title": "Tu sa cesta končí",
+    "text": "Stránka, ktorú hľadáte, neexistuje alebo sa presunula."
+  },
+  "footer": {
+    "tagline": "Oficiálny importér ROX a DFSK pre Českú republiku a Slovensko.",
+    "pages": "Stránky",
+    "social": "Siete",
+    "privacy": "Ochrana osobných údajov",
+    "trademarks": "ROX a DFSK sú ochranné známky ich vlastníkov.",
+    "rights": "Všetky práva vyhradené.",
+    "routeEnd": "Koniec etapy"
+  },
+  "schema": {
+    "description": "Oficiálny importér vozidiel ROX a DFSK pre Českú republiku a Slovensko. Showroom, servis a pneuservis."
+  }
+}

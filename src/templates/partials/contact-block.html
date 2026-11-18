@@ -1,0 +1,32 @@
+<div class="contact-block grid">
+  <div class="contact-block__big">
+    <!-- TODO: mock -->
+    <a class="contact-big" href="${tel(company.phone)}" data-magnetic><span class="contact-big__label mono">${t.common.phone}</span><span class="contact-big__value">${e(company.phone)}</span></a>
+    <!-- TODO: mock -->
+    <a class="contact-big contact-big--mail" href="mailto:${e(company.email)}" data-magnetic><span class="contact-big__label mono">${t.common.email}</span><span class="contact-big__value">${e(company.email)}</span></a>
+  </div>
+
+  <dl class="contact-block__facts">
+    <div>
+      <dt class="mono">${t.common.address}</dt>
+      <!-- TODO: mock -->
+      <dd><address>${e(company.name)}<br>${e(company.address.street)}<br>${e(company.address.zip)} ${e(company.address.city)}</address></dd>
+    </div>
+    <div>
+      <dt class="mono">${t.common.ico}</dt>
+      <!-- TODO: mock -->
+      <dd class="mono">${e(company.ico)}</dd>
+    </div>
+    <div>
+      <dt class="mono">${t.common.hours}</dt>
+      <dd>
+        ${include('hours.html', { which: 'showroom', title: t.common.hoursShowroom })}
+        ${include('hours.html', { which: 'service', title: t.common.hoursService })}
+      </dd>
+    </div>
+  </dl>
+
+  <div class="contact-block__map">
+    ${include('map.html')}
+  </div>
+</div>

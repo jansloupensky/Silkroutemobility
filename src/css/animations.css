@@ -1,0 +1,108 @@
+/* ==========================================================================
+   ANIMATIONS – výchozí stavy a fallbacky pro JS animace.
+   Pravidla:
+   - bez JS (html.no-js) je vše vidět, preloader/kurzor/opona se nezobrazí,
+   - prefers-reduced-motion: reduce → nic se neskrývá, nic se nehýbe,
+   - skrývá se jen hero nadpis (kvůli bliknutí) a má pojistku: po 3 s se ukáže vždy.
+   ========================================================================== */
+
+@keyframes srm-show { to { visibility: visible; opacity: 1; } }
+@keyframes srm-hide { to { visibility: hidden; opacity: 0; } }
+@keyframes srm-pulse {
+  0% { transform: scale(.6); opacity: .9; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* ---------------------------------------------------------- preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: grid;
+  place-items: center;
+  color: var(--silk);
+  pointer-events: none;
+  /* pojistka, kdyby JS selhal */
+  animation: srm-hide 0s 3s forwards;
+}
+.preloader__panel { position: absolute; top: 0; bottom: 0; width: 50.5%; background: var(--ink); }
+.preloader__panel--l { left: 0; }
+.preloader__panel--r { right: 0; }
+.preloader__inner { position: relative; display: grid; justify-items: center; gap: 1.25rem; text-align: center; }
+.preloader__mark { width: 88px; height: 88px; color: var(--copper); }
+.preloader__mark path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.preloader__mark circle { opacity: 0; }
+.preloader__name {
+  font-family: var(--f-display);
+  font-stretch: 125%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-size: .95rem;
+}
+.preloader__name span { font-weight: 400; color: var(--sand); }
+.preloader__count { color: var(--sand); }
+
+.no-js .preloader,
+.is-returning .preloader { display: none; }
+@media (prefers-reduced-motion: reduce) { .preloader { display: none; } }
+
+/* --------------------------------------------------------------- hero */
+@media (prefers-reduced-motion: no-preference) {
+  /* Úvodní stránka: při první návštěvě nadpis zakrývá preloader, takže se vykreslí hned (rychlé LCP).
+     Skrývá se jen při opakované návštěvě a na stránkách značek. */
+  .js.is-returning [data-hero-title],
+  .js.is-returning [data-hero-sub],
+  .js.is-returning .hero__kicker,
+  .js:not([data-page="index"]) [data-hero-title],
+  .js .brand-hero__kicker {
+    visibility: hidden;
+    animation: srm-show 0s 3s forwards;
+  }
+  .js [data-hero-title].is-ready,
+  .js [data-hero-sub].is-ready,
+  .js .is-ready { visibility: visible; animation: none; }
+
+}
+.split-mask { display: inline-block; overflow: clip; vertical-align: top; padding-block: .06em; margin-block: -.06em; }
+/* maska SplitText nesmí uříznout diakritiku nad velkými písmeny (Ý, Š, Č …) */
+.split-word-mask { padding-top: .28em; margin-top: -.28em; padding-bottom: .08em; margin-bottom: -.08em; }
+
+/* ---------------------------------------------------- přechody stránek */
+.curtain { display: none; }
+.js .curtain {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  background: var(--ink);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .45s var(--ease-out);
+}
+.js .curtain.is-on { opacity: 1; pointer-events: auto; }
+.js.is-arriving .curtain { opacity: 1; transition: none; }
+
+/* View Transitions API (Chrome, Edge, Safari 18.2+): přechod mezi dokumenty bez JS */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: .45s var(--ease-out) both srm-vt-out; }
+  ::view-transition-new(root) { animation: .6s var(--ease-out) .1s both srm-vt-in; }
+}
+@keyframes srm-vt-out { to { opacity: 0; transform: translateY(-2%); } }
+@keyframes srm-vt-in { from { opacity: 0; transform: translateY(2%); } }
+
+/* ------------------------------------------------- mapa kontaktu – pin */
+@media (prefers-reduced-motion: no-preference) {
+  .map__pin-ring { transform-box: fill-box; transform-origin: center; animation: srm-pulse 2.6s var(--ease-out) infinite; }
+}
+
+/* ------------------------------------------------------------ omezený pohyb */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

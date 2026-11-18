@@ -1,0 +1,21 @@
+# Výstup buildu – generuje se příkazem `node build.js`, na FTP se nahrává z něj
+dist/
+
+# Závislosti (projekt žádné nemá, pro jistotu)
+node_modules/
+
+# macOS a editory
+.DS_Store
+.vscode/
+.idea/
+
+# Konfliktní kopie z iCloudu / Dropboxu („index 2.html“, „logo 2.png“)
+* [0-9].*
+* [0-9]
+
+# Lokální nastavení Claude Code
+.claude/
+
+# Logy a dočasné soubory
+*.log
+npm-debug.log*

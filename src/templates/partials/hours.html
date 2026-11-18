@@ -1,0 +1,7 @@
+<div class="hours">
+  <p class="hours__title mono">${title}</p>
+  <!-- TODO: mock -->
+  <dl class="hours__list mono">
+    ${hours(which).map((h) => `<div><dt>${h.days}</dt><dd>${h.time}</dd></div>`).join('')}
+  </dl>
+</div>

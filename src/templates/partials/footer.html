@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="site-footer__grid wrap">
+    <div class="site-footer__intro">
+      <p class="site-footer__tagline">${t.footer.tagline}</p>
+      <!-- TODO: mock -->
+      <p class="site-footer__contact">
+        <a class="mono" href="${tel(company.phone)}">${e(company.phone)}</a><br>
+        <a class="mono" href="mailto:${e(company.email)}">${e(company.email)}</a>
+      </p>
+      <!-- TODO: mock -->
+      <address class="site-footer__address">${e(company.address.street)}<br>${e(company.address.zip)} ${e(company.address.city)}</address>
+    </div>
+
+    <nav class="site-footer__col" aria-label="${e(t.footer.pages)}">
+      <p class="site-footer__head mono">${t.footer.pages}</p>
+      <ul class="site-footer__links">
+        <li><a href="${url('rox')}">ROX</a></li>
+        <li><a href="${url('dfsk')}">DFSK</a></li>
+        <li><a href="${url('index', 'showroom')}">${t.nav.showroom}</a></li>
+        <li><a href="${url('index', 'service')}">${t.nav.service}</a></li>
+        <li><a href="${url('kontakt')}">${t.nav.contact}</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__col">
+      <p class="site-footer__head mono">${t.nav.language}</p>
+      ${include('lang-switch.html')}
+      <p class="site-footer__head mono">${t.footer.social}</p>
+      <!-- TODO: mock -->
+      <ul class="site-footer__social">
+        <li><a href="${e(company.social.instagram)}" rel="noopener">Instagram</a></li>
+        <li><a href="${e(company.social.facebook)}" rel="noopener">Facebook</a></li>
+        <li><a href="${e(company.social.youtube)}" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="site-footer__wordmark" aria-hidden="true" data-wordmark><span>Silk Route</span><span>Mobility</span></p>
+
+  <div class="site-footer__legal wrap mono">
+    <p>© ${year} ${e(company.name)} · ${t.common.ico} ${e(company.ico)}<!-- TODO: mock --></p>
+    <p><a href="${url('privacy')}">${t.footer.privacy}</a></p>
+    <p>${t.footer.trademarks}</p>
+  </div>
+</footer>

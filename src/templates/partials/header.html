@@ -1,0 +1,51 @@
+<a class="skip-link" href="#main">${t.nav.skip}</a>
+<header class="site-header" data-header>
+  <div class="site-header__bar">
+    <a class="site-header__logo" href="${url('index')}" aria-label="${e(t.nav.home)}">${include('logo.html')}</a>
+
+    <nav class="site-nav" aria-label="${e(t.nav.mainNav)}">
+      <ul class="site-nav__list">
+        <li><a href="${url('rox')}"${page.key === 'rox' ? ' aria-current="page"' : ''}>ROX</a></li>
+        <li><a href="${url('dfsk')}"${page.key === 'dfsk' ? ' aria-current="page"' : ''}>DFSK</a></li>
+        <li><a href="${url('index', 'showroom')}">${t.nav.showroom}</a></li>
+        <li><a href="${url('index', 'service')}">${t.nav.service}</a></li>
+        <li><a href="${url('kontakt')}"${page.key === 'kontakt' ? ' aria-current="page"' : ''}>${t.nav.contact}</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__tools">
+      ${include('lang-switch.html')}
+      <!-- TODO: mock --><a class="site-header__phone mono" href="${tel(company.phone)}">${e(company.phone)}</a>
+      <a class="burger" href="#menu" aria-controls="menu" aria-expanded="false" data-menu-open>
+        <span class="burger__label">${t.nav.menu}</span>
+        <span class="burger__lines" aria-hidden="true"><span></span><span></span></span>
+        <span class="visually-hidden">${t.nav.openMenu}</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" data-menu aria-label="${e(t.nav.mainNav)}">
+  <div class="menu__inner">
+    <div class="menu__top">
+      <span class="menu__index mono">SRM / ${t.nav.menu}</span>
+      <a class="menu__close" href="#" data-menu-close>
+        <span>${t.nav.close}</span>
+        <span class="visually-hidden">${t.nav.closeMenu}</span>
+      </a>
+    </div>
+    <nav aria-label="${e(t.nav.mainNav)}">
+      <ol class="menu__list">
+        <li><a href="${url('rox')}"><span class="mono">01</span>ROX</a></li>
+        <li><a href="${url('dfsk')}"><span class="mono">02</span>DFSK</a></li>
+        <li><a href="${url('index', 'showroom')}"><span class="mono">03</span>${t.nav.showroom}</a></li>
+        <li><a href="${url('index', 'service')}"><span class="mono">04</span>${t.nav.service}</a></li>
+        <li><a href="${url('kontakt')}"><span class="mono">05</span>${t.nav.contact}</a></li>
+      </ol>
+    </nav>
+    <div class="menu__foot">
+      ${include('lang-switch.html')}
+      <!-- TODO: mock --><a class="menu__phone mono" href="${tel(company.phone)}">${e(company.phone)}</a>
+    </div>
+  </div>
+</div>

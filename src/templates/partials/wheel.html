@@ -1,0 +1,33 @@
+${(() => {
+  // Stylizované kolo: dezén pneumatiky (bloky po obvodu), ráfek a paprsky. Tah 1,5 px.
+  const C = 200, treadOuter = 190, treadInner = 160, rim = 118, hub = 26;
+  const blocks = [];
+  const N = 48;
+  for (let i = 0; i < N; i++) {
+    const a = (i / N) * Math.PI * 2;
+    const a2 = a + (Math.PI * 2) / N * 0.55;
+    const off = i % 2 ? 6 : 0;
+    const p = (r, ang) => `${(C + r * Math.cos(ang)).toFixed(1)} ${(C + r * Math.sin(ang)).toFixed(1)}`;
+    blocks.push(`<path d="M${p(treadOuter, a)} L${p(treadOuter, a2)} L${p(treadInner + 8 + off, a2 + 0.03)} L${p(treadInner + 8 + off, a + 0.03)}Z"/>`);
+  }
+  const spokes = [];
+  for (let i = 0; i < 6; i++) {
+    const a = (i / 6) * Math.PI * 2;
+    const b = a + 0.32;
+    const p = (r, ang) => `${(C + r * Math.cos(ang)).toFixed(1)} ${(C + r * Math.sin(ang)).toFixed(1)}`;
+    spokes.push(`<path d="M${p(hub + 8, a)} L${p(rim - 10, a - 0.12)} M${p(hub + 8, a + 0.18)} L${p(rim - 10, b)}"/>`);
+  }
+  return `<svg class="wheel" viewBox="0 0 400 400" focusable="false" data-wheel>
+    <g class="wheel__spin">
+      <circle class="wheel__line" cx="${C}" cy="${C}" r="${treadOuter}"/>
+      <circle class="wheel__line" cx="${C}" cy="${C}" r="${treadInner}"/>
+      <g class="wheel__tread">${blocks.join('')}</g>
+      <circle class="wheel__line" cx="${C}" cy="${C}" r="${rim}"/>
+      <circle class="wheel__line wheel__line--thin" cx="${C}" cy="${C}" r="${rim - 10}"/>
+      <g class="wheel__spokes">${spokes.join('')}</g>
+      <circle class="wheel__line" cx="${C}" cy="${C}" r="${hub}"/>
+      <circle class="wheel__hub" cx="${C}" cy="${C}" r="6"/>
+    </g>
+    <path class="wheel__marker" d="M200 0 V24"/>
+  </svg>`;
+})()}

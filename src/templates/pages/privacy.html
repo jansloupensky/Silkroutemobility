@@ -1,0 +1,17 @@
+<section class="sec sec--light page-text">
+  <div class="wrap grid">
+    <header class="page-text__head">
+      <p class="stage mono">${t.privacy.updated}</p>
+      <h1 class="h1">${t.privacy.title}</h1>
+    </header>
+    <div class="page-text__body prose">
+      ${t.privacy.sections.map((s) => `<h2 class="h3">${s.h}</h2><p>${fill(s.p, {
+        company: e(company.name),
+        ico: e(company.ico),
+        address: e(addressLine),
+        email: `<a href="mailto:${e(company.email)}">${e(company.email)}</a>`,
+      })}</p>`).join('\n      ')}
+      <!-- TODO: mock (údaje správce) -->
+    </div>
+  </div>
+</section>

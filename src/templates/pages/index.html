@@ -1,0 +1,145 @@
+<!-- ============================================================ HERO -->
+<section class="hero" data-hero>
+  <div class="hero__media" data-hero-media>
+    ${img('home-hero', { alt: '', eager: true, cls: 'hero__img' })}
+    ${(() => { const v = video('home-hero'); return v ? `<div class="hero__video" data-hero-video${v.webm ? ` data-webm="${v.webm}"` : ''}${v.mp4 ? ` data-mp4="${v.mp4}"` : ''}></div>` : ''; })()}
+    <div class="hero__shade" data-hero-shade></div>
+  </div>
+  <div class="hero__content wrap grid" data-hero-content>
+    <h1 class="hero__title display" data-hero-title>${t.home.hero.title}</h1>
+    <p class="hero__sub" data-hero-sub>${t.home.hero.sub}</p>
+  </div>
+</section>
+
+<!-- ============================================================ 01 O NÁS -->
+<section class="sec sec--dark about" id="about" aria-labelledby="about-title">
+  <div class="wrap grid">
+    <header class="about__head">
+      ${include('stage.html', { n: '01', label: t.home.about.label})}
+      <h2 class="about__title h2" id="about-title">${t.home.about.title}</h2>
+    </header>
+    <p class="about__text" data-reveal-words>${t.home.about.text}</p>
+  </div>
+</section>
+
+${['rox', 'dfsk'].map((b, bi) => {
+  const tb = t.brand[b];
+  const list = modelsOf(b);
+  const light = b === 'dfsk';
+  return `
+<!-- ============================================================ 0${bi + 2} ${b.toUpperCase()} -->
+<section class="sec ${light ? 'sec--light' : 'sec--dark'} brand-sec brand-sec--${b}" id="${b}" aria-labelledby="${b}-title">
+  <div class="wrap grid brand-sec__head">
+    <div class="brand-sec__intro">
+      ${include('stage.html', { n: '0' + (bi + 2), label: b.toUpperCase() })}
+      <span class="brand-sec__logo">${include('brand-logo.html', { b, dark: light })}</span>
+      <h2 class="h2" id="${b}-title">${tb.sub.replace(/\.$/, '')}</h2>
+      <p class="lead">${tb.story[0]}</p>
+      <a class="link-arrow mono" href="${url(b)}">${t.home.brandSec.cta} ${b.toUpperCase()} <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="brand-sec__media" data-clip-reveal>
+      <div class="brand-sec__parallax" data-parallax>${img('brand-' + b, { alt: '', sizes: '(min-width: 1024px) 40vw, 100vw' })}</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <ul class="model-grid model-grid--${list.length}" data-count-group>
+      ${list.map((m) => `
+      <li class="model-tile" id="model-${m.slug}">
+        <article>
+          <a class="model-tile__media" href="${url(m.brand, m.slug)}" tabindex="-1" aria-hidden="true">${img('model-' + m.slug, { alt: '', sizes: '(min-width: 1024px) 33vw, 90vw' })}</a>
+          <h3 class="model-tile__name">${e(m.name)}</h3>
+          <p class="model-tile__lead">${tb.models[m.slug]}</p>
+          <dl class="specs-mini mono">
+            <div><dt>${t.specs.powertrain}</dt><dd>${spec(m, 'powertrain')}</dd></div>
+            <div><dt>${t.specs.power}</dt><dd>${spec(m, 'power') ?? `<span class="tbc">${t.common.tbc}</span><!-- TODO -->`}</dd></div>
+            <div><dt>${m.powertrain === 'petrol' ? t.specs.consumption : t.specs.range}</dt><dd>${spec(m, m.powertrain === 'petrol' ? 'consumption' : 'range') ?? `<span class="tbc">${t.common.tbc}</span><!-- TODO -->`}</dd></div>
+            <div><dt>${t.specs.warranty}</dt><dd>${spec(m, 'warranty') ?? `<span class="tbc">${t.common.tbc}</span><!-- TODO -->`}</dd></div>
+          </dl>
+          <p class="model-tile__price price mono" data-count>${price(m)}</p>
+          <a class="link-arrow mono" href="${url(m.brand, m.slug)}">${t.common.modelDetail}<span class="visually-hidden"> ${e(m.name)}</span> <span aria-hidden="true">→</span></a>
+        </article>
+      </li>`).join('')}
+    </ul>
+    <p class="price-note mono">${t.common.priceNote}</p>
+  </div>
+</section>`;
+}).join('')}
+
+<!-- ============================================================ 04 SHOWROOM -->
+<section class="sec sec--light showroom" id="showroom" aria-labelledby="showroom-title">
+  <div class="showroom__split">
+    <div class="showroom__media" data-clip-reveal>
+      <div class="showroom__parallax" data-parallax>${img('showroom', { alt: '', sizes: '(min-width: 1024px) 50vw, 100vw' })}</div>
+      <!-- DOČASNÉ: ilustrační fotka, nahradit fotkou vlastního showroomu -->
+      <p class="photo-note mono">${t.common.illustrative}</p>
+    </div>
+    <div class="showroom__body">
+      ${include('stage.html', { n: '04', label: t.home.showroom.label})}
+      <h2 class="h2" id="showroom-title">${t.home.showroom.title}</h2>
+      <p class="lead">${t.home.showroom.text}</p>
+      <div class="showroom__facts">
+        ${include('hours.html', { which: 'showroom', title: t.common.hoursShowroom })}
+        <div class="showroom__addr">
+          <p class="mono showroom__addr-label">${t.common.address}</p>
+          <!-- TODO: mock -->
+          <address>${e(company.address.street)}<br>${e(company.address.zip)} ${e(company.address.city)}</address>
+          <a class="link-arrow mono" href="${url('kontakt')}">${t.nav.contact} <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 05 SERVIS -->
+<section class="sec sec--dark service" id="service" aria-labelledby="service-title">
+  <div class="wrap grid">
+    <header class="service__head">
+      ${include('stage.html', { n: '05', label: t.home.service.label})}
+      <h2 class="h2" id="service-title">${t.home.service.title}</h2>
+      <p class="service__intro">${t.home.service.intro}</p>
+      <div class="service__phone">
+        <p class="mono service__phone-label">${t.home.service.phoneLabel}</p>
+        <!-- TODO: mock --><a class="phone-xl" href="${tel(company.phoneService)}" data-magnetic>${e(company.phoneService)}</a>
+        ${include('hours.html', { which: 'service', title: t.common.hoursService })}
+      </div>
+    </header>
+    <ol class="svc-table" data-svc>
+      ${t.home.service.rows.map((r, i) => `
+      <li class="svc-table__row">
+        <span class="svc-table__n mono">S-${pad(i + 1)}</span>
+        <h3 class="svc-table__name">${r.name}</h3>
+        <p class="svc-table__text">${r.text}</p>
+      </li>`).join('')}
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================ 06 PNEUSERVIS -->
+<section class="sec sec--light tyres" id="tyres" aria-labelledby="tyres-title">
+  <div class="wrap grid">
+    <div class="tyres__visual" aria-hidden="true">
+      ${include('wheel.html')}
+    </div>
+    <div class="tyres__body">
+      ${include('stage.html', { n: '06', label: t.home.tyres.label})}
+      <h2 class="h2" id="tyres-title">${t.home.tyres.title}</h2>
+      <p class="tyres__intro lead">${t.home.tyres.intro}</p>
+      <dl class="tyre-list">
+        ${t.home.tyres.rows.map((r, i) => `<div class="tyre-list__item"><dt><span class="mono">P-${pad(i + 1)}</span>${r.name}</dt><dd>${r.text}</dd></div>`).join('\n        ')}
+      </dl>
+      <div class="tyres__phone">
+        <p class="mono">${t.home.tyres.phoneLabel}</p>
+        <!-- TODO: mock --><a class="phone-xl" href="${tel(company.phoneService)}" data-magnetic>${e(company.phoneService)}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 07 KONTAKT -->
+<section class="sec sec--dark contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    ${include('stage.html', { n: '07', label: t.home.contact.label})}
+    <h2 class="h2 contact__title" id="contact-title">${t.home.contact.title}</h2>
+    ${include('contact-block.html')}
+  </div>
+</section>

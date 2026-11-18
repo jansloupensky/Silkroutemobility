@@ -1,0 +1,235 @@
+{
+  "_readme": "Seznam všech obrázků webu. Soubory patří do src/assets/img/. Dokud soubor neexistuje, web zobrazí zástupnou plochu se stejným poměrem stran. Stačí dodat <file>.jpg (nebo .png u výřezů aut). Volitelně <file>.webp / <file>.avif a menší varianty <file>-800.webp, <file>-1200.webp atd. Build je sám najde a použije v srcset.",
+  "images": [
+    {
+      "id": "home-hero",
+      "file": "home-hero",
+      "w": 2560,
+      "h": 1440,
+      "label": "Hero – auto v krajině 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/home2/life.jpg"
+    },
+    {
+      "id": "brand-rox",
+      "file": "brand-rox",
+      "w": 1152,
+      "h": 1440,
+      "label": "ROX – foto 4:5",
+      "source": "https://prd-file.roxmotor.com/rox-website/adamas/sellingPoint/2.jpg"
+    },
+    {
+      "id": "brand-dfsk",
+      "file": "brand-dfsk",
+      "w": 556,
+      "h": 695,
+      "label": "DFSK – foto 4:5",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-600-Driving.jpg"
+    },
+    {
+      "id": "model-adamas",
+      "file": "model-rox-adamas",
+      "w": 2000,
+      "h": 1000,
+      "label": "ROX ADAMAS – výřez 2:1",
+      "cutout": true,
+      "source": "https://prd-file.roxmotor.com/rox-website/home2/adamas.png"
+    },
+    {
+      "id": "model-01",
+      "file": "model-rox-01",
+      "w": 2000,
+      "h": 1000,
+      "label": "ROX 01 – výřez 2:1",
+      "cutout": true,
+      "source": "https://prd-file.roxmotor.com/rox-website/home2/rox01.png"
+    },
+    {
+      "id": "model-500",
+      "file": "model-dfsk-500",
+      "w": 667,
+      "h": 334,
+      "label": "DFSK 500 – výřez 2:1",
+      "cutout": true,
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/500-White.webp"
+    },
+    {
+      "id": "model-600",
+      "file": "model-dfsk-600",
+      "w": 1013,
+      "h": 507,
+      "label": "DFSK 600 – výřez 2:1",
+      "cutout": true,
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/600-white.webp"
+    },
+    {
+      "id": "model-e5",
+      "file": "model-dfsk-e5",
+      "w": 967,
+      "h": 484,
+      "label": "DFSK E5 – výřez 2:1",
+      "cutout": true,
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/E5-Square.png"
+    },
+    {
+      "id": "showroom",
+      "file": "showroom",
+      "w": 1600,
+      "h": 2000,
+      "label": "Showroom – foto 4:5",
+      "source": "https://prd-file.roxmotor.com/rox-website/home2/services.jpg",
+      "temporary": "DOČASNÉ – ilustrační foto servisního centra ROX, nahradit fotkou vlastního showroomu"
+    },
+    {
+      "id": "rox-hero",
+      "file": "rox-hero",
+      "w": 2560,
+      "h": 1440,
+      "label": "ROX – hero 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/adamas/allTerrain/2_1.jpg"
+    },
+    {
+      "id": "dfsk-hero",
+      "file": "dfsk-hero",
+      "w": 1236,
+      "h": 695,
+      "label": "DFSK – hero 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-600-Driving.jpg"
+    },
+    {
+      "id": "gallery-adamas-1",
+      "file": "gallery-rox-adamas-1",
+      "w": 1920,
+      "h": 1080,
+      "label": "ROX ADAMAS – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/adamas/sellingPoint/1.jpg"
+    },
+    {
+      "id": "gallery-adamas-2",
+      "file": "gallery-rox-adamas-2",
+      "w": 1920,
+      "h": 1080,
+      "label": "ROX ADAMAS – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/adamas/sellingPoint/5.jpg"
+    },
+    {
+      "id": "gallery-adamas-3",
+      "file": "gallery-rox-adamas-3",
+      "w": 1920,
+      "h": 1080,
+      "label": "ROX ADAMAS – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/adamas/outdoors/1.jpg"
+    },
+    {
+      "id": "gallery-adamas-4",
+      "file": "gallery-rox-adamas-4",
+      "w": 1920,
+      "h": 1080,
+      "label": "ROX ADAMAS – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/adamas/zuocang/1.jpg"
+    },
+    {
+      "id": "gallery-01-1",
+      "file": "gallery-rox-01-1",
+      "w": 1920,
+      "h": 1080,
+      "label": "ROX 01 – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/chexing/banner4.png"
+    },
+    {
+      "id": "gallery-01-2",
+      "file": "gallery-rox-01-2",
+      "w": 1920,
+      "h": 1080,
+      "label": "ROX 01 – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/sheji/banner1.png"
+    },
+    {
+      "id": "gallery-01-3",
+      "file": "gallery-rox-01-3",
+      "w": 1442,
+      "h": 811,
+      "label": "ROX 01 – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/quandixing/banner3_global"
+    },
+    {
+      "id": "gallery-01-4",
+      "file": "gallery-rox-01-4",
+      "w": 1439,
+      "h": 809,
+      "label": "ROX 01 – foto 16:9",
+      "source": "https://prd-file.roxmotor.com/rox-website/quanchangjing/banner5_global"
+    },
+    {
+      "id": "gallery-500-1",
+      "file": "gallery-dfsk-500-1",
+      "w": 1000,
+      "h": 563,
+      "label": "DFSK 500 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-500-Promo-Rough.jpg"
+    },
+    {
+      "id": "gallery-500-2",
+      "file": "gallery-dfsk-500-2",
+      "w": 963,
+      "h": 542,
+      "label": "DFSK 500 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-500-Exterior-Promo-2.jpg"
+    },
+    {
+      "id": "gallery-500-3",
+      "file": "gallery-dfsk-500-3",
+      "w": 1301,
+      "h": 732,
+      "label": "DFSK 500 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/INTERIER-dfsk-500.jpg"
+    },
+    {
+      "id": "gallery-600-1",
+      "file": "gallery-dfsk-600-1",
+      "w": 1236,
+      "h": 695,
+      "label": "DFSK 600 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-600-Back.jpg"
+    },
+    {
+      "id": "gallery-600-2",
+      "file": "gallery-dfsk-600-2",
+      "w": 1236,
+      "h": 695,
+      "label": "DFSK 600 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-600-Wheels.jpg"
+    },
+    {
+      "id": "gallery-600-3",
+      "file": "gallery-dfsk-600-3",
+      "w": 1065,
+      "h": 599,
+      "label": "DFSK 600 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/interier-600.jpg"
+    },
+    {
+      "id": "gallery-e5-1",
+      "file": "gallery-dfsk-e5-1",
+      "w": 1600,
+      "h": 900,
+      "label": "DFSK E5 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-E5-Interior-Dash-Seats.jpg"
+    },
+    {
+      "id": "gallery-e5-2",
+      "file": "gallery-dfsk-e5-2",
+      "w": 1920,
+      "h": 1080,
+      "label": "DFSK E5 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/07/7mist.jpg"
+    },
+    {
+      "id": "gallery-e5-3",
+      "file": "gallery-dfsk-e5-3",
+      "w": 1061,
+      "h": 597,
+      "label": "DFSK E5 – foto 16:9",
+      "source": "https://dfskcars.cz/wp-content/uploads/2025/05/interier-e5.jpg"
+    }
+  ]
+}

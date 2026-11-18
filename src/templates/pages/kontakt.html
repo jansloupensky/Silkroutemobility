@@ -1,0 +1,44 @@
+<section class="sec sec--dark page-head">
+  <div class="wrap">
+    ${include('stage.html', { n: '07', label: t.contactPage.title })}
+    <h1 class="display page-head__title">${t.contactPage.title}</h1>
+    <p class="lead page-head__lead">${t.contactPage.lead}</p>
+  </div>
+</section>
+
+<section class="sec sec--dark contact-page" aria-label="${e(t.contactPage.title)}">
+  <div class="wrap grid contact-page__grid">
+    <div class="contact-page__col">
+      <h2 class="h3">${t.contactPage.sales}</h2>
+      <!-- TODO: mock -->
+      <a class="contact-big" href="${tel(company.phone)}" data-magnetic><span class="contact-big__label mono">${t.common.phone}</span><span class="contact-big__value">${e(company.phone)}</span></a>
+      <!-- TODO: mock -->
+      <a class="contact-big contact-big--mail" href="mailto:${e(company.email)}"><span class="contact-big__label mono">${t.common.email}</span><span class="contact-big__value">${e(company.email)}</span></a>
+      ${include('hours.html', { which: 'showroom', title: t.common.hoursShowroom })}
+    </div>
+    <div class="contact-page__col">
+      <h2 class="h3">${t.contactPage.service}</h2>
+      <!-- TODO: mock -->
+      <a class="contact-big" href="${tel(company.phoneService)}" data-magnetic><span class="contact-big__label mono">${t.common.phone}</span><span class="contact-big__value">${e(company.phoneService)}</span></a>
+      <!-- TODO: mock -->
+      <a class="contact-big contact-big--mail" href="mailto:${e(company.emailService)}"><span class="contact-big__label mono">${t.common.email}</span><span class="contact-big__value">${e(company.emailService)}</span></a>
+      ${include('hours.html', { which: 'service', title: t.common.hoursService })}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--light contact-where" aria-labelledby="where-title">
+  <div class="wrap grid">
+    <div class="contact-where__text">
+      <h2 class="h2" id="where-title">${t.contactPage.where}</h2>
+      <!-- TODO: mock -->
+      <address class="lead">${e(company.name)}<br>${e(company.address.street)}<br>${e(company.address.zip)} ${e(company.address.city)}</address>
+      <dl class="facts mono">
+        <div><dt>${t.common.ico}</dt><dd>${e(company.ico)}<!-- TODO: mock --></dd></div>
+      </dl>
+    </div>
+    <div class="contact-where__map">
+      ${include('map.html')}
+    </div>
+  </div>
+</section>

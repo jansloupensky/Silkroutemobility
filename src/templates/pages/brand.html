@@ -1,0 +1,100 @@
+${(() => {
+  const b = page.brand;
+  const tb = t.brand[b];
+  const list = modelsOf(b);
+  const TBC = `<span class="tbc">${t.common.tbc}</span><!-- TODO -->`;
+  // základní údaje se ukážou vždy (případně „upřesníme“), doplňkové jen pokud jsou v site.json
+  const baseKeys = ['powertrain', 'engine', 'power', 'torque', 'transmission', 'drive', 'battery', 'range', 'consumption', 'acceleration', 'dimensions', 'wheelbase', 'seats', 'warranty'];
+  const optional = ['engine', 'transmission', 'battery', 'range', 'acceleration'];
+  const specKeysFor = (m) => baseKeys.filter((k) => !optional.includes(k) || hasSpec(m, k));
+  const galleryIds = (slug) => Object.keys(images).filter((id) => id.startsWith('gallery-' + slug + '-'));
+
+  return `
+<!-- ============================================================ HERO -->
+<section class="brand-hero brand-hero--${b}" data-hero>
+  <div class="brand-hero__media" data-hero-media>${img(b + '-hero', { alt: '', eager: true, cls: 'brand-hero__img' })}</div>
+  <div class="hero__shade" data-hero-shade></div>
+  <div class="brand-hero__content wrap grid" data-hero-content>
+    <p class="brand-hero__kicker mono"><span class="brand-hero__logo">${include('brand-logo.html', { b })}</span><span>Silk Route Mobility · ${t.common.officialImporter}</span></p>
+    <h1 class="brand-hero__title" data-hero-title>${tb.title}</h1>
+    <p class="brand-hero__sub">${tb.sub}</p>
+    <ul class="brand-hero__models mono">
+      ${list.map((m) => `<li><a href="#${m.slug}">${e(m.name)}</a></li>`).join('')}
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ 01 PŘÍBĚH -->
+<section class="sec sec--light brand-story" aria-labelledby="story-title">
+  <div class="wrap grid">
+    <header class="brand-story__head">
+      ${include('stage.html', { n: '01', label: t.brand.storyLabel })}
+      <h2 class="h2" id="story-title">${tb.sub}</h2>
+    </header>
+    <div class="brand-story__text">
+      ${tb.story.map((p, i) => `<p${i === 0 ? ' class="lead"' : ''}>${p}</p>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 02 MODELY -->
+<div class="brand-models" aria-label="${e(t.brand.modelsLabel)}">
+${list.map((m, i) => `
+<section class="sec ${i % 2 ? 'sec--light' : 'sec--dark'} model-detail" id="${m.slug}" aria-labelledby="m-${m.slug}-title">
+  <div class="wrap grid">
+    <header class="model-detail__head">
+      ${include('stage.html', { n: '0' + (i + 2), label: t.brand.modelsLabel + ' · ' + pad(i + 1) + '/' + pad(list.length) })}
+      <h2 class="model-detail__title display-2" id="m-${m.slug}-title">${e(m.name)}</h2>
+      <p class="lead">${tb.models[m.slug]}</p>
+    </header>
+
+    <div class="gallery model-detail__gallery" data-gallery role="region" aria-roledescription="carousel" aria-label="${e(t.brand.galleryLabel + ' ' + m.name)}">
+      <ul class="gallery__track" data-gallery-track tabindex="0" aria-label="${e(t.brand.galleryLabel + ' ' + m.name)}">
+        ${galleryIds(m.slug).map((id, k, arr) => `<li class="gallery__slide" aria-roledescription="slide" aria-label="${k + 1} ${t.common.of} ${arr.length}">${img(id, { alt: m.name + ' – ' + t.common.photo + ' ' + (k + 1), sizes: '(min-width: 1024px) 66vw, 100vw' })}</li>`).join('')}
+      </ul>
+      <div class="gallery__ui mono">
+        <span class="gallery__count" data-gallery-count aria-live="polite">01 / ${pad(galleryIds(m.slug).length)}</span>
+        <span class="gallery__hint" aria-hidden="true">${t.common.drag}</span>
+        <span class="gallery__btns">
+          <button type="button" class="gallery__btn" data-gallery-prev aria-label="${e(t.common.prev)}"><span aria-hidden="true">←</span></button>
+          <button type="button" class="gallery__btn" data-gallery-next aria-label="${e(t.common.next)}"><span aria-hidden="true">→</span></button>
+        </span>
+      </div>
+    </div>
+
+    <div class="model-detail__data">
+      <table class="spec-table">
+        <caption class="mono">${t.specs.tableCaption}</caption>
+        <tbody>
+          ${specKeysFor(m).map((k) => `<tr><th scope="row">${t.specs[k]}</th><td class="mono">${spec(m, k) ?? TBC}</td></tr>`).join('\n          ')}
+        </tbody>
+      </table>
+      <div class="model-detail__price">
+        <p class="mono">${t.specs.priceFrom}</p>
+        <p class="price price--xl mono" data-count>${price(m)}</p>
+        <p class="price-note mono">${t.common.priceNote}</p>
+      </div>
+    </div>
+  </div>
+</section>`).join('')}
+</div>
+
+<!-- ============================================================ CTA -->
+<section class="sec sec--dark brand-cta" aria-labelledby="cta-title">
+  <div class="wrap grid">
+    <div class="brand-cta__text">
+      ${include('stage.html', { n: '0' + (list.length + 2), label: t.nav.showroom })}
+      <h2 class="h2" id="cta-title">${t.brand.ctaTitle}</h2>
+      <p class="lead">${t.brand.ctaText}</p>
+    </div>
+    <div class="brand-cta__contact">
+      <!-- TODO: mock -->
+      <a class="phone-xl" href="${tel(company.phone)}" data-magnetic>${e(company.phone)}</a>
+      <!-- TODO: mock -->
+      <address class="mono">${e(company.address.street)}, ${e(company.address.zip)} ${e(company.address.city)}</address>
+      ${include('hours.html', { which: 'showroom', title: t.common.hoursShowroom })}
+      <a class="link-arrow mono" href="${url('kontakt')}">${t.nav.contact} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>`;
+})()}

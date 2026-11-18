@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en_GB",
+    "label": "EN",
+    "name": "English",
+    "siteName": "Silk Route Mobility"
+  },
+  "pages": {
+    "index": {
+      "title": "Silk Route Mobility – official importer of ROX and DFSK",
+      "description": "Official importer of ROX and DFSK for the Czech Republic and Slovakia. New ROX and DFSK cars, plus service and tyres for every make."
+    },
+    "rox": {
+      "title": "ROX – off-road SUVs | Silk Route Mobility",
+      "description": "ROX ADAMAS and ROX 01: large off-road SUVs built for long journeys. Specifications, prices and a showroom visit at Silk Route Mobility."
+    },
+    "dfsk": {
+      "title": "DFSK – SUVs with a five-year warranty | Silk Route Mobility",
+      "description": "DFSK 500, DFSK 600 and the DFSK E5 plug-in hybrid. Practical SUVs with a five-year warranty. Prices, specifications and showroom."
+    },
+    "kontakt": {
+      "title": "Contact – showroom and service | Silk Route Mobility",
+      "description": "Phone, email, address and opening hours of the Silk Route Mobility showroom, service and tyre centre."
+    },
+    "privacy": {
+      "title": "Privacy policy | Silk Route Mobility",
+      "description": "How Silk Route Mobility handles personal data. This website uses no cookies and no analytics."
+    },
+    "404": {
+      "title": "Page not found | Silk Route Mobility",
+      "description": "This page does not exist."
+    }
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "Silk Route Mobility – home",
+    "showroom": "Showroom",
+    "service": "Service",
+    "contact": "Contact",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "close": "Close",
+    "language": "Language",
+    "mainNav": "Main navigation",
+    "call": "Call"
+  },
+  "common": {
+    "priceFrom": "from",
+    "currency": "CZK",
+    "priceSoon": "Price coming soon",
+    "priceNote": "Prices are indicative and include VAT.",
+    "tbc": "to be confirmed",
+    "modelDetail": "Model details",
+    "view": "View",
+    "drag": "Drag",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "ico": "Company ID",
+    "hours": "Opening hours",
+    "hoursShowroom": "Showroom",
+    "hoursService": "Service and tyres",
+    "openGoogle": "Open in Google Maps",
+    "openMapy": "Open in Mapy.cz",
+    "mapAlt": "Stylised map showing the showroom location",
+    "backHome": "Back to home",
+    "toTop": "Back to top",
+    "photo": "photo",
+    "of": "of",
+    "prev": "Previous",
+    "next": "Next",
+    "years": {
+      "one": "year",
+      "few": "years",
+      "many": "years"
+    },
+    "days": {
+      "Mo": "Mon",
+      "Tu": "Tue",
+      "We": "Wed",
+      "Th": "Thu",
+      "Fr": "Fri",
+      "Sa": "Sat",
+      "Su": "Sun"
+    },
+    "closed": "closed",
+    "currencyEur": "EUR",
+    "loading": "Loading",
+    "position": "Position",
+    "officialImporter": "official importer",
+    "illustrative": "Illustrative photo"
+  },
+  "powertrain": {
+    "petrol": "petrol",
+    "phev": "plug-in hybrid",
+    "TODO": "to be confirmed",
+    "erev": "range-extended EV"
+  },
+  "specs": {
+    "powertrain": "Powertrain",
+    "power": "Power",
+    "torque": "Torque",
+    "drive": "Drive",
+    "consumption": "Consumption",
+    "range": "Range",
+    "consumptionRange": "Consumption / range",
+    "dimensions": "Dimensions (L × W × H)",
+    "wheelbase": "Wheelbase",
+    "seats": "Seats",
+    "warranty": "Warranty",
+    "priceFrom": "Price from",
+    "tableCaption": "Specifications",
+    "battery": "Battery",
+    "acceleration": "0–100 km/h",
+    "transmission": "Transmission",
+    "engine": "Engine"
+  },
+  "home": {
+    "hero": {
+      "title": "Official importer of ROX and DFSK",
+      "sub": "New ROX and DFSK cars. Service and tyres for every make."
+    },
+    "about": {
+      "label": "About",
+      "title": "Sales, service and tyres in one place",
+      "text": "Silk Route Mobility is the official importer of ROX and DFSK for the Czech Republic and Slovakia. We sell new cars from both brands in our own showroom. Our workshop and tyre centre look after cars of every make, and for ROX and DFSK that includes warranty inspections and genuine parts."
+    },
+    "showroom": {
+      "label": "Showroom",
+      "title": "See the cars up close in our showroom",
+      "text": "Our showroom has cars from both brands. Open the doors, try the seats, fold the back row. We will walk you through trim levels and prices and answer anything you want to know."
+    },
+    "service": {
+      "label": "Service",
+      "title": "Service for every make",
+      "intro": "We service and repair cars of every make. For ROX and DFSK we also carry out warranty service to the manufacturer’s schedule.",
+      "phoneLabel": "Book a service",
+      "rows": [
+        {
+          "id": "warranty",
+          "name": "ROX and DFSK warranty service",
+          "text": "Inspections and repairs to the manufacturer’s schedule, so your warranty stays valid."
+        },
+        {
+          "id": "maintenance",
+          "name": "Service for all makes",
+          "text": "Routine maintenance, oil changes, brakes and repairs, whatever you drive."
+        },
+        {
+          "id": "diagnostics",
+          "name": "Diagnostics",
+          "text": "Reading and evaluating fault codes from the control units."
+        },
+        {
+          "id": "parts",
+          "name": "Genuine parts",
+          "text": "Parts for ROX and DFSK straight from the manufacturer."
+        },
+        {
+          "id": "assistance",
+          "name": "24/7 assistance",
+          "text": "For ROX and DFSK owners: if your car stops on the road, we help. Day or night."
+        }
+      ]
+    },
+    "tyres": {
+      "label": "Tyres",
+      "title": "Wheels ready for every season",
+      "intro": "Tyre changes, balancing and alignment for cars of every make.",
+      "phoneLabel": "Book a tyre appointment",
+      "rows": [
+        {
+          "id": "change",
+          "name": "Tyre change",
+          "text": "Seasonal wheel swaps or tyre changes on rims."
+        },
+        {
+          "id": "storage",
+          "name": "Storage",
+          "text": "We keep your wheels until next season."
+        },
+        {
+          "id": "balance",
+          "name": "Balancing",
+          "text": "So the steering wheel stays still at speed."
+        },
+        {
+          "id": "geometry",
+          "name": "Alignment",
+          "text": "Axle alignment. The car tracks straight and tyres wear evenly."
+        }
+      ]
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "How to reach us",
+      "lead": "We are happy to show you the cars in person."
+    },
+    "brandSec": {
+      "cta": "More about",
+      "modelsTitle": "Models"
+    }
+  },
+  "brand": {
+    "storyLabel": "Story",
+    "modelsLabel": "Models",
+    "galleryLabel": "Gallery",
+    "ctaTitle": "Come and see them in the showroom",
+    "ctaText": "See the cars in person. Give us a call so we can expect you.",
+    "rox": {
+      "title": "ROX",
+      "sub": "Off-road SUVs for long journeys.",
+      "story": [
+        "ROX builds large SUVs for people who travel. Not for the school run, but for routes where the road turns to gravel and the gravel turns to a river crossing.",
+        "ROX cars look square, sturdy and calm. Inside, they offer space and comfort for full days behind the wheel.",
+        "Silk Route Mobility brings them to the Czech Republic and Slovakia. We handle sales, service and spare parts ourselves."
+      ],
+      "models": {
+        "adamas": "An off-road SUV built for expeditions.",
+        "01": "A large SUV for families and long distances."
+      }
+    },
+    "dfsk": {
+      "title": "DFSK",
+      "sub": "Practical SUVs with a five-year warranty.",
+      "story": [
+        "DFSK makes cars for everyday life. Roomy, sensibly priced and covered by a five-year warranty.",
+        "Choose from two petrol SUVs and the E5 plug-in hybrid, which can cover shorter trips on electricity alone.",
+        "Silk Route Mobility handles DFSK sales, service and parts as the official importer."
+      ],
+      "models": {
+        "500": "An SUV for the city and weekends away.",
+        "600": "An SUV for families and longer trips.",
+        "e5": "Plug-in hybrid. Short trips on electricity, long ones with petrol."
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Contact",
+    "lead": "Showroom, service and tyre centre share one address.",
+    "sales": "Sales and showroom",
+    "service": "Service and tyres",
+    "company": "Company",
+    "where": "Find us"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "updated": "Effective from November 2026",
+    "sections": [
+      {
+        "h": "No cookies, no analytics",
+        "p": "This website uses no cookies, analytics tools, ad networks or embedded third-party content. It has no forms. We collect nothing about you while you browse."
+      },
+      {
+        "h": "Server logs",
+        "p": "The server hosting this website may record technical access logs (IP address, time, requested page). They are used only to keep the site running and secure and are deleted after a short period."
+      },
+      {
+        "h": "When you contact us",
+        "p": "If you call or email us, we use your name and contact details only to deal with your enquiry. We do not pass them on to third parties and keep them only as long as necessary."
+      },
+      {
+        "h": "Your rights",
+        "p": "You have the right to access, correct or erase your data and the right to object. You can lodge a complaint with the Czech Office for Personal Data Protection (uoou.gov.cz)."
+      },
+      {
+        "h": "Data controller",
+        "p": "The controller is {company}, Company ID {ico}, {address}. Contact: {email}."
+      }
+    ]
+  },
+  "notFound": {
+    "label": "404",
+    "title": "The road ends here",
+    "text": "The page you are looking for does not exist or has moved."
+  },
+  "footer": {
+    "tagline": "Official importer of ROX and DFSK for the Czech Republic and Slovakia.",
+    "pages": "Pages",
+    "social": "Social",
+    "privacy": "Privacy policy",
+    "trademarks": "ROX and DFSK are trademarks of their respective owners.",
+    "rights": "All rights reserved.",
+    "routeEnd": "End of stage"
+  },
+  "schema": {
+    "description": "Official importer of ROX and DFSK vehicles for the Czech Republic and Slovakia. Showroom, service and tyre centre."
+  }
+}

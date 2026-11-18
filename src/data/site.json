@@ -1,0 +1,298 @@
+{
+  "_readme": "Jediné místo pro kontakty, otevírací dobu, modely a ceny. Po úpravě spusťte `node build.js`. Hodnoty \"TODO\" se na webu zobrazí jako „upřesníme“. Technické údaje mohou být text (stejný ve všech jazycích) nebo objekt {cs, sk, en}.",
+  "site": {
+    "url": "https://silkroutemobility.com",
+    "defaultLang": "cs",
+    "langs": [
+      "cs",
+      "sk",
+      "en"
+    ],
+    "_prices": "priceFrom = Kč (CZ web), priceFromEur = € (SK web). Hodnota 0 = „Cena brzy“. Ceny se mezi měnami nepřepočítávají.",
+    "areaServed": [
+      "CZ",
+      "SK"
+    ]
+  },
+  "company": {
+    "_mock": "VŠECHNY KONTAKTY NÍŽE JSOU SMYŠLENÉ (mock). Majitel je musí doplnit.",
+    "name": "Silk Route Mobility s.r.o.",
+    "ico": "00000000",
+    "phone": "+420 000 000 000",
+    "phoneService": "+420 000 000 001",
+    "email": "info@silkroutemobility.com",
+    "emailService": "servis@silkroutemobility.com",
+    "address": {
+      "street": "Ulice 000",
+      "city": "Praha",
+      "zip": "000 00",
+      "country": "CZ"
+    },
+    "geo": {
+      "lat": 50.0755,
+      "lng": 14.4378
+    },
+    "hours": {
+      "_format": "days: Mo Tu We Th Fr Sa Su; čas HH:MM. Z toho se generuje text ve všech jazycích i Schema.org.",
+      "showroom": [
+        {
+          "days": [
+            "Mo",
+            "Tu",
+            "We",
+            "Th",
+            "Fr"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "days": [
+            "Sa"
+          ],
+          "opens": "09:00",
+          "closes": "12:00"
+        }
+      ],
+      "service": [
+        {
+          "days": [
+            "Mo",
+            "Tu",
+            "We",
+            "Th",
+            "Fr"
+          ],
+          "opens": "07:30",
+          "closes": "17:00"
+        }
+      ]
+    },
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "youtube": "#"
+    }
+  },
+  "models": [
+    {
+      "brand": "rox",
+      "slug": "adamas",
+      "name": "ROX ADAMAS",
+      "powertrain": "erev",
+      "priceFrom": 0,
+      "priceFromEur": 0,
+      "specs": {
+        "power": "350 kW",
+        "torque": "740 N·m",
+        "drive": {
+          "cs": "4×4, dva elektromotory",
+          "sk": "4×4, dva elektromotory",
+          "en": "AWD, dual electric motors"
+        },
+        "engine": {
+          "cs": "elektromobil s range extenderem 1,5T",
+          "sk": "elektromobil s range extenderom 1,5T",
+          "en": "range-extended EV, 1.5T range extender"
+        },
+        "battery": {
+          "cs": "56,01 kWh",
+          "sk": "56,01 kWh",
+          "en": "56.01 kWh"
+        },
+        "acceleration": {
+          "cs": "5,5 s",
+          "sk": "5,5 s",
+          "en": "5.5 s"
+        },
+        "consumption": "TODO",
+        "seats": {
+          "cs": "6 nebo 7",
+          "sk": "6 alebo 7",
+          "en": "6 or 7"
+        },
+        "wheelbase": "3010 mm",
+        "warranty": "TODO",
+        "range": {
+          "cs": "1226 km (WLTC), z toho 235 km na elektřinu",
+          "sk": "1226 km (WLTC), z toho 235 km na elektrinu",
+          "en": "1,226 km (WLTC), incl. 235 km electric"
+        },
+        "dimensions": "5298 × 1985 × 1856 mm"
+      },
+      "_source": "roxmotor.com/en/adamas/configuration (listopad 2026), verze pro globální trh – ověřit pro EU"
+    },
+    {
+      "brand": "rox",
+      "slug": "01",
+      "name": "ROX 01",
+      "powertrain": "erev",
+      "priceFrom": 0,
+      "priceFromEur": 0,
+      "specs": {
+        "power": "350 kW",
+        "torque": "740 N·m",
+        "drive": {
+          "cs": "4×4, dva elektromotory",
+          "sk": "4×4, dva elektromotory",
+          "en": "AWD, dual electric motors"
+        },
+        "engine": {
+          "cs": "elektromobil s range extenderem 1,5T",
+          "sk": "elektromobil s range extenderom 1,5T",
+          "en": "range-extended EV, 1.5T range extender"
+        },
+        "battery": {
+          "cs": "56,01 kWh",
+          "sk": "56,01 kWh",
+          "en": "56.01 kWh"
+        },
+        "acceleration": {
+          "cs": "5,5 s",
+          "sk": "5,5 s",
+          "en": "5.5 s"
+        },
+        "consumption": "TODO",
+        "seats": {
+          "cs": "6 nebo 7",
+          "sk": "6 alebo 7",
+          "en": "6 or 7"
+        },
+        "wheelbase": "3010 mm",
+        "warranty": "TODO",
+        "range": {
+          "cs": "1115 km (WLTC), z toho 235 km na elektřinu",
+          "sk": "1115 km (WLTC), z toho 235 km na elektrinu",
+          "en": "1,115 km (WLTC), incl. 235 km electric"
+        },
+        "dimensions": "5295 × 1980 × 1869 mm"
+      },
+      "_source": "roxmotor.com/en/rox01/configuration (listopad 2026), verze pro globální trh – ověřit pro EU"
+    },
+    {
+      "brand": "dfsk",
+      "slug": "500",
+      "name": "DFSK 500",
+      "powertrain": "petrol",
+      "priceFrom": 550000,
+      "priceFromEur": 0,
+      "specs": {
+        "power": {
+          "cs": "85 kW (115 k)",
+          "sk": "85 kW (115 k)",
+          "en": "85 kW (115 hp)"
+        },
+        "torque": {
+          "cs": "147,5 N·m",
+          "sk": "147,5 N·m",
+          "en": "147.5 N·m"
+        },
+        "drive": {
+          "cs": "přední",
+          "sk": "predný",
+          "en": "front-wheel drive"
+        },
+        "engine": {
+          "cs": "1,5 l benzín, atmosférický",
+          "sk": "1,5 l benzín, atmosférický",
+          "en": "1.5 l petrol, naturally aspirated"
+        },
+        "transmission": {
+          "cs": "automatická CVT",
+          "sk": "automatická CVT",
+          "en": "CVT automatic"
+        },
+        "consumption": "TODO",
+        "dimensions": "4385 × 1850 × 1645 mm",
+        "wheelbase": "2655 mm",
+        "seats": "5",
+        "warranty": 5
+      },
+      "_source": "dfskcars.cz – tabulka technických parametrů (listopad 2026)"
+    },
+    {
+      "brand": "dfsk",
+      "slug": "600",
+      "name": "DFSK 600",
+      "powertrain": "petrol",
+      "priceFrom": 699000,
+      "priceFromEur": 0,
+      "specs": {
+        "power": {
+          "cs": "130 kW (177 k)",
+          "sk": "130 kW (177 k)",
+          "en": "130 kW (177 hp)"
+        },
+        "torque": "300 N·m",
+        "drive": {
+          "cs": "přední",
+          "sk": "predný",
+          "en": "front-wheel drive"
+        },
+        "engine": {
+          "cs": "1,5 l benzín, turbo (GDI)",
+          "sk": "1,5 l benzín, turbo (GDI)",
+          "en": "1.5 l turbo petrol (GDI)"
+        },
+        "transmission": {
+          "cs": "6stupňová automatická",
+          "sk": "6-stupňová automatická",
+          "en": "6-speed automatic"
+        },
+        "consumption": "TODO",
+        "dimensions": "4720 × 1865 × 1710 mm",
+        "wheelbase": "2785 mm",
+        "seats": "7",
+        "warranty": 5
+      },
+      "_source": "dfskcars.cz – tabulka technických parametrů (listopad 2026)"
+    },
+    {
+      "brand": "dfsk",
+      "slug": "e5",
+      "name": "DFSK E5",
+      "powertrain": "phev",
+      "priceFrom": 879000,
+      "priceFromEur": 0,
+      "specs": {
+        "power": {
+          "cs": "81 kW benzín + 130 kW elektromotor",
+          "sk": "81 kW benzín + 130 kW elektromotor",
+          "en": "81 kW petrol + 130 kW electric"
+        },
+        "torque": {
+          "cs": "135 N·m + 300 N·m",
+          "sk": "135 N·m + 300 N·m",
+          "en": "135 N·m + 300 N·m"
+        },
+        "drive": {
+          "cs": "přední",
+          "sk": "predný",
+          "en": "front-wheel drive"
+        },
+        "engine": {
+          "cs": "plug-in hybrid, 1,5 l benzín",
+          "sk": "plug-in hybrid, 1,5 l benzín",
+          "en": "plug-in hybrid, 1.5 l petrol"
+        },
+        "transmission": "E-CVT",
+        "battery": {
+          "cs": "17,52 kWh, nabíjení 4 h",
+          "sk": "17,52 kWh, nabíjanie 4 h",
+          "en": "17.52 kWh, 4 h charging"
+        },
+        "range": {
+          "cs": "87 km na elektřinu",
+          "sk": "87 km na elektrinu",
+          "en": "87 km electric"
+        },
+        "consumption": "TODO",
+        "dimensions": "4760 × 1865 × 1710 mm",
+        "wheelbase": "2865 mm",
+        "seats": "7",
+        "warranty": 5
+      },
+      "_source": "dfskcars.cz – tabulka technických parametrů (listopad 2026)"
+    }
+  ]
+}

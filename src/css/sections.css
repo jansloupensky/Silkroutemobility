@@ -1,0 +1,423 @@
+/* ==========================================================================
+   SECTIONS – layout jednotlivých sekcí (mobile-first)
+   Mřížka: 4 sloupce na mobilu, 12 od 768 px. Asymetrie je záměrná.
+   ========================================================================== */
+
+/* ================================================================ HERO */
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: var(--header-h);
+  padding-bottom: clamp(5.5rem, 4rem + 7vh, 9rem);
+  overflow: hidden;
+  background: var(--ink);
+}
+.hero__media { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+.hero__media .ph, .hero__media .pic { height: 100%; aspect-ratio: auto !important; }
+.hero__video { position: absolute; inset: 0; }
+.hero__video video { width: 100%; height: 100%; object-fit: cover; }
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(14, 13, 11, .72) 0%, rgba(14, 13, 11, .5) 50%, rgba(14, 13, 11, .18) 100%),
+    linear-gradient(180deg, rgba(14, 13, 11, .55) 0%, rgba(14, 13, 11, 0) 28%, rgba(14, 13, 11, .2) 55%, rgba(14, 13, 11, .92) 100%);
+}
+.hero .ph__label, .brand-hero .ph__label { top: calc(var(--header-h) + 1rem); right: var(--gutter); left: auto; bottom: auto; }
+
+.hero__content { row-gap: 0; }
+.hero__kicker { color: var(--sand); margin-bottom: 1.25rem; }
+.hero__kicker span { color: var(--copper); }
+.hero__title {
+  /* nejdelší slovo („VÝCHODU.“, „JOURNEYS.“) se musí vejít od 360 px */
+  font-size: clamp(2.2rem, .3rem + 8.2vw, 10.5rem);
+  max-width: 12em;
+  overflow-wrap: normal;
+}
+.hero__sub { margin-top: 1.5rem; max-width: 30ch; font-size: var(--fs-lead); line-height: 1.4; }
+
+@media (min-width: 1024px) {
+  .hero__kicker { grid-column: 1 / span 6; }
+  .hero__title { grid-column: 1 / -1; }
+  .hero__sub { grid-column: 8 / span 4; margin-top: 2rem; }
+}
+
+
+/* =============================================================== 01 O NÁS */
+.about__text {
+  font-size: clamp(1.35rem, .9rem + 2.1vw, 3.1rem);
+  line-height: 1.22;
+  letter-spacing: -.01em;
+  max-width: 34ch;
+}
+@media (min-width: 768px) {
+  .about__head { grid-column: 1 / -1; }
+  .about__head .h2 { max-width: 16ch; }
+  .about__text { grid-column: 5 / -1; }
+}
+@media (min-width: 1280px) {
+  .about__text { grid-column: 6 / -1; }
+}
+
+/* ======================================================= 02 ROX / 03 DFSK */
+.brand-sec__head { align-items: center; }
+.brand-sec__logo { display: block; height: clamp(30px, 1.6rem + 1.6vw, 52px); margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem); }
+.brand-sec__logo .brand-logo { color: var(--fg); }
+.brand-sec .lead { color: var(--fg-2); }
+.brand-sec .link-arrow { margin-top: 1.75rem; }
+.brand-sec__media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; max-height: 80svh; }
+.brand-sec__parallax { position: absolute; inset: -8% 0; }
+.brand-sec__parallax .ph, .brand-sec__parallax .pic { height: 100%; aspect-ratio: auto !important; }
+@media (min-width: 768px) {
+  .brand-sec__intro { grid-column: 1 / span 6; }
+  .brand-sec__media { grid-column: 8 / -1; }
+  /* DFSK zrcadlově – obě značky jsou na první pohled oddělené */
+  .brand-sec--dfsk .brand-sec__intro { grid-column: 7 / -1; grid-row: 1; }
+  .brand-sec--dfsk .brand-sec__media { grid-column: 1 / span 5; grid-row: 1; }
+}
+.brand-sec--rox { --accent: #C26A2E; }
+
+.model-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 2rem + 2vw, 4rem) var(--col-gap);
+  margin-top: clamp(3.5rem, 2rem + 5vw, 7rem);
+}
+@media (min-width: 768px) {
+  .model-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .model-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .model-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.model-tile { border-top: 1px solid var(--rule); padding-top: 1rem; }
+.model-tile article { display: flex; flex-direction: column; height: 100%; }
+.model-tile__media { display: block; margin-bottom: 1rem; }
+.model-tile__media .pic img { object-fit: contain; }
+.model-tile__media .pic, .model-tile__media .ph { transition: transform .9s var(--ease-expo); }
+.model-tile__media:hover .pic { transform: scale(1.03); }
+.model-tile__name {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-stretch: 125%;
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.4rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.model-tile__lead { color: var(--fg-2); margin: .5rem 0 1.25rem; }
+.model-tile .specs-mini { margin-bottom: 1.25rem; }
+.model-tile__price { margin-top: auto; margin-bottom: .75rem; }
+.brand-sec .price-note { margin-top: 2.5rem; }
+/* výřezy aut na světlém pozadí – jemný stín pod autem */
+.sec--light .model-tile__media .pic img { filter: drop-shadow(0 18px 18px rgba(14, 13, 11, .18)); }
+
+/* =============================================================== 04 SHOWROOM */
+.showroom { padding-block: 0; overflow: hidden; }
+.showroom__split { display: grid; grid-template-columns: 1fr; }
+.showroom__media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; max-height: 92svh; width: 100%; }
+.showroom__parallax { position: absolute; inset: -8% 0; }
+.showroom__parallax .ph, .showroom__parallax .pic { height: 100%; aspect-ratio: auto !important; }
+.showroom__body { padding: var(--sec-pad) calc(var(--gutter) + var(--safe-r)) var(--sec-pad) calc(var(--gutter) + var(--safe-l)); }
+.showroom__facts { display: grid; gap: 2rem; margin-top: clamp(2rem, 4vw, 4rem); }
+.showroom__addr-label { color: var(--fg-2); margin-bottom: .4rem; }
+.showroom__addr address { font-size: var(--fs-lead); line-height: 1.35; margin-bottom: 1rem; }
+.showroom .hours { margin-top: 0; }
+
+@media (min-width: 1024px) {
+  .showroom__split { grid-template-columns: repeat(12, minmax(0, 1fr)); min-height: 100svh; }
+  .showroom__media { grid-column: 1 / span 6; aspect-ratio: auto; max-height: none; height: 100%; }
+  .showroom__body { grid-column: 7 / span 6; align-self: center; padding-inline: clamp(2rem, 5vw, 6rem) calc(var(--gutter) + var(--safe-r)); }
+  .showroom__facts { grid-template-columns: 1fr 1fr; }
+}
+
+/* =============================================================== 05 SERVIS */
+.service__intro { color: var(--sand); max-width: 34ch; }
+.service__phone { margin-top: clamp(2rem, 4vw, 3.5rem); }
+.service__phone-label { color: var(--sand); margin-bottom: .25rem; }
+
+.svc-table { border-top: 1px solid var(--line-strong); }
+.svc-table__row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  column-gap: 1rem;
+  row-gap: .35rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.svc-table__n { color: var(--copper); padding-top: .3em; }
+.svc-table__name {
+  font-family: var(--f-display);
+  font-stretch: 112%;
+  font-weight: 600;
+  font-size: clamp(1.3rem, .9rem + 1.5vw, 2.6rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+@media (min-width: 1024px) and (max-width: 1439px) { .svc-table__name { font-stretch: 100%; } }
+.svc-table__text { grid-column: 2; color: var(--sand); max-width: 42ch; }
+.svc-table__row::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .8s var(--ease-expo);
+}
+.svc-table__row:hover::after { transform: scaleX(1); }
+
+@media (min-width: 768px) {
+  .service__head { grid-column: 1 / span 5; }
+  .svc-table { grid-column: 6 / -1; align-self: start; }
+}
+@media (min-width: 1024px) {
+  .service__head { grid-column: 1 / span 4; position: sticky; top: calc(var(--header-h) + 2rem); align-self: start; }
+  .svc-table { grid-column: 6 / -1; }
+  .svc-table__row { grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 1fr); align-items: baseline; padding: 1.6rem 0; }
+  .svc-table__text { grid-column: 3; }
+}
+
+/* =============================================================== 06 PNEUSERVIS */
+.tyres { overflow: hidden; }
+.tyres__visual { position: relative; }
+.wheel {
+  width: 120%;
+  max-width: none;
+  height: auto;
+  margin-left: -45%;
+  margin-block: -10% -6%;
+}
+.wheel__line { fill: none; stroke: var(--fg); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.wheel__line--thin { stroke: var(--fg-2); }
+.wheel__tread path { fill: none; stroke: var(--fg); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-linejoin: miter; }
+.wheel__spokes path { fill: none; stroke: var(--fg-2); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.wheel__hub { fill: var(--accent); }
+.wheel__marker { stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.wheel__spin { transform-origin: 200px 200px; }
+
+.tyre-list { margin-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--rule); }
+.tyre-list__item { display: grid; grid-template-columns: 1fr; gap: .25rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.tyre-list dt {
+  display: flex; gap: 1rem; align-items: baseline;
+  font-family: var(--f-display); font-stretch: 112%; font-weight: 600;
+  font-size: var(--fs-h3); text-transform: uppercase; line-height: 1.1;
+}
+.tyre-list dt .mono { color: var(--accent); min-width: 3rem; }
+.tyre-list dd { color: var(--fg-2); padding-left: 4rem; }
+.tyres__phone { margin-top: clamp(2rem, 4vw, 3rem); }
+.tyres__phone .mono { color: var(--fg-2); }
+
+@media (min-width: 768px) {
+  .tyres .grid { align-items: center; }
+  .tyres__visual { grid-column: 1 / span 5; }
+  .wheel { width: 150%; margin: 0 0 0 -62%; }
+  .tyres__body { grid-column: 7 / -1; }
+  .tyre-list__item { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .tyre-list dd { padding-left: 0; }
+}
+@media (min-width: 1280px) {
+  .tyres__visual { grid-column: 1 / span 6; }
+  .wheel { width: 140%; margin-left: -48%; }
+}
+
+/* =============================================================== 07 KONTAKT */
+.contact__title { max-width: 16ch; }
+.contact-block { margin-top: clamp(2rem, 5vw, 5rem); }
+.contact-block__big { border-top: 1px solid var(--rule); }
+.contact-block__facts { display: grid; gap: 1.5rem; align-content: start; }
+.contact-block__facts > div { padding-top: .9rem; border-top: 1px solid var(--rule); }
+.contact-block__facts dt { color: var(--fg-2); margin-bottom: .4rem; }
+.contact-block__facts .hours:first-child { margin-top: 0; }
+@media (min-width: 768px) {
+  .contact-block__big { grid-column: 1 / -1; }
+  .contact-block__facts { grid-column: 1 / span 4; }
+  .contact-block__map { grid-column: 6 / -1; }
+}
+@media (min-width: 1280px) {
+  .contact-block__facts { grid-column: 1 / span 3; }
+  .contact-block__map { grid-column: 5 / -1; }
+}
+
+/* ================================================== STRÁNKY ZNAČEK */
+.brand-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding-block: calc(var(--header-h) + 2rem) clamp(2.5rem, 6vw, 5rem);
+  overflow: hidden;
+  background: var(--ink);
+}
+.brand-hero__media { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+.brand-hero__media .ph, .brand-hero__media .pic { height: 100%; aspect-ratio: auto !important; }
+.brand-hero__content { row-gap: 1rem; }
+.brand-hero__kicker { color: var(--sand); }
+.brand-hero__title {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-stretch: 125%;
+  font-size: clamp(5rem, 1rem + 24vw, 34rem);
+  line-height: .78;
+  letter-spacing: -.04em;
+  text-transform: uppercase;
+  margin-left: -.04em;
+}
+.brand-dfsk .brand-hero__title { font-stretch: 100%; }
+.brand-hero__sub { font-size: var(--fs-lead); max-width: 24ch; line-height: 1.35; }
+.brand-hero__models { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.brand-hero__models a { display: inline-flex; align-items: center; min-height: 44px; color: var(--silk); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+.brand-hero__models a:hover { border-color: var(--copper); }
+@media (min-width: 1024px) {
+  .brand-hero__kicker, .brand-hero__title { grid-column: 1 / -1; }
+  .brand-hero__sub { grid-column: 1 / span 5; }
+  .brand-hero__models { grid-column: 8 / -1; justify-content: flex-end; align-self: end; }
+}
+
+@media (min-width: 768px) {
+  .brand-story__head { grid-column: 1 / span 6; }
+  .brand-story__text { grid-column: 7 / -1; margin-top: clamp(0rem, 8vw, 10rem); }
+}
+.brand-story__text p + p { margin-top: 1.25rem; color: var(--fg-2); max-width: 52ch; }
+
+.model-detail__head .lead { color: var(--fg-2); margin-top: 1rem; }
+
+.gallery { position: relative; margin-inline: calc((var(--gutter) + var(--safe-l)) * -1) calc((var(--gutter) + var(--safe-r)) * -1); }
+.gallery__track {
+  display: flex;
+  gap: var(--col-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-inline: calc(var(--gutter) + var(--safe-l));
+  scroll-padding-inline: calc(var(--gutter) + var(--safe-l));
+  cursor: grab;
+  overscroll-behavior-x: contain;
+}
+.gallery__track::-webkit-scrollbar { display: none; }
+.gallery__track.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.gallery__track:focus-visible { outline-offset: -3px; }
+.gallery__slide { flex: 0 0 86%; scroll-snap-align: start; }
+.gallery__slide img { pointer-events: none; }
+.gallery__ui {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-inline: calc(var(--gutter) + var(--safe-l)) calc(var(--gutter) + var(--safe-r));
+  color: var(--fg-2);
+}
+.gallery__hint { flex: 1; }
+.gallery__btns { display: flex; gap: .5rem; }
+.gallery__btn {
+  display: inline-grid; place-items: center;
+  width: 48px; height: 48px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--fg);
+  transition: background-color .3s, color .3s;
+}
+.gallery__btn:hover { background: var(--fg); color: var(--bg); }
+.gallery__btn[disabled] { opacity: .35; pointer-events: none; }
+@media (min-width: 1024px) { .gallery__slide { flex-basis: 66%; } }
+
+.spec-table { width: 100%; }
+.spec-table caption { text-align: left; color: var(--fg-2); padding-bottom: .75rem; }
+.spec-table th, .spec-table td { padding: .8rem 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: baseline; }
+.spec-table tr:first-child th, .spec-table tr:first-child td { border-top: 1px solid var(--rule); }
+.spec-table th { font-weight: 400; color: var(--fg-2); width: 48%; padding-right: 1rem; }
+.spec-table td { text-transform: none; }
+.model-detail__price { margin-top: 2.5rem; }
+.model-detail__price > .mono:first-child { color: var(--fg-2); margin-bottom: .25rem; }
+@media (min-width: 768px) {
+  .model-detail__data { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; }
+  .spec-table { grid-column: 1 / span 7; }
+  .model-detail__price { grid-column: 8 / -1; margin-top: 0; }
+}
+
+@media (min-width: 1024px) {
+  .brand-cta__text { grid-column: 1 / span 6; }
+  .brand-cta__contact { grid-column: 8 / -1; align-self: end; }
+}
+.brand-cta__contact .phone-xl { font-size: clamp(1.6rem, .6rem + 2.6vw, 3.5rem); }
+.brand-cta__contact address { margin-top: 1rem; color: var(--sand); }
+.brand-cta__contact .link-arrow { margin-top: 1.5rem; }
+
+/* ================================================== KONTAKT, TEXTY, 404 */
+.page-head { padding-top: calc(var(--header-h) + var(--sec-pad) * .6); padding-bottom: 0; }
+.page-head__title { font-size: clamp(2.6rem, .5rem + 11vw, 16rem); }
+.page-head__lead { margin-top: 1.5rem; color: var(--sand); }
+@media (min-width: 1024px) { .page-head__lead { margin-left: 50%; } }
+
+.contact-page__col h2 { color: var(--sand); margin-bottom: 1rem; }
+.contact-page__col .contact-big__value { font-size: clamp(1.6rem, .6rem + 2.9vw, 4.4rem); }
+.contact-page__col .contact-big--mail .contact-big__value { font-size: clamp(1.1rem, .6rem + 2vw, 2.6rem); }
+@media (min-width: 768px) {
+  .contact-page__col:first-child { grid-column: 1 / span 6; }
+  .contact-page__col:last-child { grid-column: 7 / -1; }
+}
+@media (min-width: 1280px) {
+  .contact-page__col:last-child { grid-column: 8 / -1; }
+}
+.contact-where address { margin-block: 1rem 2rem; }
+.facts > div { display: flex; gap: 1.5rem; padding: .6rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.facts dt { color: var(--fg-2); }
+@media (min-width: 768px) {
+  .contact-where__text { grid-column: 1 / span 4; }
+  .contact-where__map { grid-column: 6 / -1; }
+}
+
+.page-text { padding-top: calc(var(--header-h) + var(--sec-pad) * .6); }
+.page-text .h1 { font-size: clamp(1.9rem, .8rem + 3.2vw, 4.5rem); line-height: .95; }
+.page-text__head .stage { margin-bottom: 1rem; }
+@media (min-width: 1024px) {
+  .page-text__head { grid-column: 1 / span 5; position: sticky; top: calc(var(--header-h) + 2rem); align-self: start; }
+  .page-text__body { grid-column: 7 / -1; }
+}
+
+.not-found {
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--header-h) + 4rem);
+}
+.not-found__title { font-size: clamp(3rem, 1rem + 11vw, 15rem); }
+.not-found .lead { margin-block: 1.5rem 2rem; color: var(--sand); }
+
+/* menší nadpisy v polovičních sloupcích, aby se dlouhá slova nelámala */
+@media (min-width: 768px) {
+  .showroom .h2, .tyres .h2, .service .h2, .brand-story .h2, .contact-where .h2, .brand-cta .h2, .brand-sec .h2 { font-size: clamp(1.85rem, .6rem + 3.1vw, 4.4rem); }
+}
+
+/* telefony v užších sloupcích (tablet, malý notebook) */
+@media (min-width: 768px) {
+  .service__head .phone-xl,
+  .tyres__phone .phone-xl { font-size: clamp(1.4rem, .3rem + 2.5vw, 3.5rem); }
+}
+
+/* ------------------------------------------------------- loga značek */
+.brand-logo { display: block; width: auto; height: 100%; color: var(--silk); }
+.brand-card__logo { display: block; height: clamp(34px, 2rem + 2.4vw, 64px); }
+.brand-card__logo .brand-logo--dfsk { height: 100%; }
+.brand-hero__kicker { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; }
+.brand-hero__logo { display: block; height: 22px; }
+
+/* ztmavení musí ležet nad fotkou/videem i uvnitř kontejneru hero__media */
+.hero__media .hero__shade { z-index: 1; }
+
+/* popisek dočasné ilustrační fotky */
+.photo-note {
+  position: absolute; left: 1rem; bottom: 1rem; z-index: 2;
+  padding: .35rem .6rem; background: rgba(14, 13, 11, .7); color: var(--silk);
+  text-transform: none; letter-spacing: .02em;
+}
+/* tmavé PNG logo DFSK má kolem sebe prázdný okraj – opticky srovnat s logem ROX */
+.brand-sec--dfsk .brand-sec__logo { height: clamp(44px, 2.2rem + 2.4vw, 80px); margin-left: -.6rem; }

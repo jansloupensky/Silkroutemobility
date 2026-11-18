@@ -1,0 +1,12 @@
+{
+  "name": "silkroutemobility-web",
+  "private": true,
+  "description": "Statický web Silk Route Mobility – build bez závislostí.",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node build.js --serve --watch",
+    "staging": "node build.js --staging",
+    "check": "node build.js --check"
+  },
+  "engines": { "node": ">=18" }
+}

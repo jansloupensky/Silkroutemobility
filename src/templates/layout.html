@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="${lang}" class="no-js" data-page="${page.key}">
+<head>
+${include('head.html')}
+</head>
+<body class="page-${page.key}${page.brand ? ' brand-' + page.brand : ''}">
+${page.key === 'index' ? include('preloader.html') : ''}
+${include('header.html')}
+<main id="main" tabindex="-1">
+${body}
+</main>
+${include('footer.html')}
+<div class="curtain" aria-hidden="true" data-curtain></div>
+<script src="${asset('vendor/gsap.min.js')}" defer></script>
+<script src="${asset('vendor/ScrollTrigger.min.js')}" defer></script>
+<script src="${asset('vendor/SplitText.min.js')}" defer></script>
+<script src="${asset('js/main.js')}" defer data-lenis="${asset('vendor/lenis.min.js')}"></script>
+</body>
+</html>

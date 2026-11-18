@@ -1,0 +1,75 @@
+/* ==========================================================================
+   LAYOUT – obal, 12sloupcová redakční mřížka, sekce
+   ========================================================================== */
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-left: calc(var(--gutter) + var(--safe-l));
+  padding-right: calc(var(--gutter) + var(--safe-r));
+}
+
+/* Mřížka: na mobilu 4 sloupce, od tabletu 12. Pozice prvků se nastavují v sections.css. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--col-gap);
+  row-gap: clamp(2rem, 1rem + 3vw, 4rem);
+}
+.grid > * { grid-column: 1 / -1; }
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+/* --------------------------------------------------------- sekce */
+
+.sec {
+  position: relative;
+  padding-block: var(--sec-pad);
+  background: var(--bg);
+  color: var(--fg);
+  isolation: isolate;
+}
+
+.sec--dark {
+  --bg: var(--ink);
+  --fg: var(--silk);
+  --fg-2: var(--sand);
+  --accent: var(--copper);
+  --rule: var(--line);
+}
+
+.sec--light {
+  --bg: var(--silk);
+  --fg: var(--ink);
+  --fg-2: var(--sand-deep);
+  --accent: var(--copper-deep);
+  --rule: var(--line-ink);
+  color-scheme: light;
+}
+
+/* Filmová zrnitost přes tmavé sekce (SVG noise, nízká opacita, nezachytává kliky). */
+.sec--dark::before,
+.hero::before,
+.brand-hero::before,
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: .07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+/* Tenká linka jako strukturální oddělovač */
+.rule {
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: var(--rule);
+}
