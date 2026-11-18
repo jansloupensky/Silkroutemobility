@@ -4,10 +4,12 @@
     {
       "id": "home-hero",
       "file": "home-hero",
-      "w": 2560,
-      "h": 1440,
+      "w": 2340,
+      "h": 1316,
       "label": "Hero – auto v krajině 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/home2/life.jpg"
+      "source": "https://www.flickr.com/photos/departmentofenergy/51172720513/",
+      "license": "Volné dílo (dílo vlády USA, U.S. Department of Energy / NREL)",
+      "temporary": "DOČASNÉ – neutrální ilustrační foto (hala s auty), nahradit fotkou vlastního showroomu/servisu"
     },
     {
       "id": "brand-rox",
@@ -73,11 +75,12 @@
     {
       "id": "showroom",
       "file": "showroom",
-      "w": 1600,
-      "h": 2000,
+      "w": 1053,
+      "h": 1316,
       "label": "Showroom – foto 4:5",
-      "source": "https://prd-file.roxmotor.com/rox-website/home2/services.jpg",
-      "temporary": "DOČASNÉ – ilustrační foto servisního centra ROX, nahradit fotkou vlastního showroomu"
+      "source": "https://www.flickr.com/photos/departmentofenergy/51172720513/",
+      "temporary": "DOČASNÉ – neutrální ilustrační foto (hala s auty), nahradit fotkou vlastního showroomu/servisu",
+      "license": "Volné dílo (dílo vlády USA, U.S. Department of Energy / NREL)"
     },
     {
       "id": "rox-hero",

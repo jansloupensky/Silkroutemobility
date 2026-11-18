@@ -421,3 +421,4 @@
 }
 /* tmavé PNG logo DFSK má kolem sebe prázdný okraj – opticky srovnat s logem ROX */
 .brand-sec--dfsk .brand-sec__logo { height: clamp(44px, 2.2rem + 2.4vw, 80px); margin-left: -.6rem; }
+.photo-note--hero { left: auto; right: calc(var(--gutter) + var(--safe-r)); bottom: calc(1rem + var(--safe-b)); }

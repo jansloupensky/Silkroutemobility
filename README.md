@@ -70,7 +70,7 @@ Formáty:
 
 | Soubor | Rozměr (px) | Použití |
 |---|---|---|
-| `home-hero.jpg` | 2560 × 1440 | Hero úvodní stránky – auto v krajině 16:9 |
+| `home-hero.jpg` | 2560 × 1440 | Hero úvodní stránky 16:9 – **teď dočasná neutrální ilustrační fotka** (hala s auty) s popiskem „Ilustrační foto“ |
 | `brand-rox.jpg` | 1600 × 2000 | Blok ROX v sekci Značky, 4:5 |
 | `brand-dfsk.jpg` | 1600 × 2000 | Blok DFSK v sekci Značky, 4:5 |
 | `model-rox-adamas.png` | 2000 × 1000 | Výřez auta (průhledné pozadí), 2:1 |
@@ -78,7 +78,7 @@ Formáty:
 | `model-dfsk-500.png` | 2000 × 1000 | Výřez auta, 2:1 |
 | `model-dfsk-600.png` | 2000 × 1000 | Výřez auta, 2:1 |
 | `model-dfsk-e5.png` | 2000 × 1000 | Výřez auta, 2:1 |
-| `showroom.jpg` | 1600 × 2000 | Sekce Showroom, 4:5 – **teď dočasná ilustrační fotka** (servisní centrum ROX) s popiskem „Ilustrační foto“ |
+| `showroom.jpg` | 1600 × 2000 | Sekce Showroom, 4:5 – **teď dočasná neutrální ilustrační fotka** s popiskem „Ilustrační foto“ |
 | `rox-hero.jpg` | 2560 × 1440 | Hero stránky ROX, 16:9 |
 | `dfsk-hero.jpg` | 2560 × 1440 | Hero stránky DFSK, 16:9 |
 | `gallery-rox-adamas-1.jpg` … `-4.jpg` | 1920 × 1080 | Galerie ROX ADAMAS (4 ks) |
@@ -100,8 +100,7 @@ Fotky, výřezy aut a loga jsou převzaté z oficiálních webů výrobců (roxm
 
 - **ROX:** zdroje ve vysokém rozlišení (2560–3840 px), kvalita výborná.
 - **DFSK:** zdroje jsou malé (max. 1605 px, výřezy aut 667–1013 px). Nic se nezvětšovalo, takže velké plochy (hero stránky DFSK, panel DFSK v sekci Značky, výřez DFSK 500) jsou na velkých monitorech měkčí. **Doporučení:** vyžádat si od DFSK tiskové fotky ve vysokém rozlišení a vyměnit je.
-- **Showroom** (`showroom.jpg`) má zatím **dočasnou ilustrační fotku** servisního centra ROX z roxmotor.com s viditelným popiskem „Ilustrační foto“. Co nejdřív ji nahraďte fotkou vlastního showroomu a popisek pak smažte (`photo-note` v `src/templates/pages/index.html`).
-- Hero úvodní stránky je fotka ROX. Pokud chcete úvod neutrální vůči značkám, vyměňte `home-hero.jpg` za vlastní snímek.
+- **Úvodní fotka a Showroom** (`home-hero.jpg`, `showroom.jpg`) mají zatím **dočasnou neutrální fotku** haly s auty bez vazby na ROX/DFSK, s viditelným popiskem „Ilustrační foto“. Zdroj: [U.S. Department of Energy / NREL na Flickru](https://www.flickr.com/photos/departmentofenergy/51172720513/), volné dílo (dílo vlády USA), komerční použití je povolené. Co nejdřív je nahraďte fotkami vlastního showroomu a servisu a pak smažte oba popisky (`photo-note` v `src/templates/pages/index.html`).
 
 ---
 
