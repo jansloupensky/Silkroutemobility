@@ -1,7 +1,7 @@
 {
   "name": "Silk Route Mobility",
   "short_name": "SRM",
-  "description": "Oficiální importér ROX a DFSK pro Českou republiku a Slovensko.",
+  "description": "Oficiální importér AITO a DFSK pro Českou republiku a Slovensko.",
   "lang": "cs",
   "start_url": "/",
   "display": "browser",

@@ -76,98 +76,82 @@
   },
   "models": [
     {
-      "brand": "rox",
-      "slug": "adamas",
-      "name": "ROX ADAMAS",
+      "brand": "aito",
+      "slug": "9",
+      "name": "AITO 9",
       "powertrain": "erev",
       "priceFrom": 0,
       "priceFromEur": 0,
       "specs": {
-        "power": "350 kW",
-        "torque": "740 N·m",
+        "power": "365 kW",
+        "torque": "675 N·m",
         "drive": {
-          "cs": "4×4, dva elektromotory",
-          "sk": "4×4, dva elektromotory",
-          "en": "AWD, dual electric motors"
-        },
-        "engine": {
-          "cs": "elektromobil s range extenderem 1,5T",
-          "sk": "elektromobil s range extenderom 1,5T",
-          "en": "range-extended EV, 1.5T range extender"
-        },
-        "battery": {
-          "cs": "56,01 kWh",
-          "sk": "56,01 kWh",
-          "en": "56.01 kWh"
-        },
-        "acceleration": {
-          "cs": "5,5 s",
-          "sk": "5,5 s",
-          "en": "5.5 s"
+          "cs": "4×4 (Smart 4WD)",
+          "sk": "4×4 (Smart 4WD)",
+          "en": "AWD (Smart 4WD)"
         },
         "consumption": "TODO",
         "seats": {
-          "cs": "6 nebo 7",
-          "sk": "6 alebo 7",
-          "en": "6 or 7"
+          "cs": "5 nebo 6",
+          "sk": "5 alebo 6",
+          "en": "5 or 6"
         },
-        "wheelbase": "3010 mm",
+        "wheelbase": "3110 mm",
         "warranty": "TODO",
         "range": {
-          "cs": "1226 km (WLTC), z toho 235 km na elektřinu",
-          "sk": "1226 km (WLTC), z toho 235 km na elektrinu",
-          "en": "1,226 km (WLTC), incl. 235 km electric"
+          "cs": "1305 km (NEDC)",
+          "sk": "1305 km (NEDC)",
+          "en": "1,305 km (NEDC)"
         },
-        "dimensions": "5298 × 1985 × 1856 mm"
+        "dimensions": "5230 × 1999 × 1800 mm"
       },
-      "_source": "roxmotor.com/en/adamas/configuration (listopad 2026), verze pro globální trh – ověřit pro EU"
+      "_source": "aitoauto.com/en/aito9 (listopad 2026), verze pro globální trh – ověřit pro EU. Baterie a zrychlení web neuvádí."
     },
     {
-      "brand": "rox",
-      "slug": "01",
-      "name": "ROX 01",
+      "brand": "aito",
+      "slug": "7",
+      "name": "AITO 7",
       "powertrain": "erev",
       "priceFrom": 0,
       "priceFromEur": 0,
       "specs": {
-        "power": "350 kW",
-        "torque": "740 N·m",
+        "power": "TODO",
+        "torque": "TODO",
         "drive": {
           "cs": "4×4, dva elektromotory",
           "sk": "4×4, dva elektromotory",
           "en": "AWD, dual electric motors"
         },
-        "engine": {
-          "cs": "elektromobil s range extenderem 1,5T",
-          "sk": "elektromobil s range extenderom 1,5T",
-          "en": "range-extended EV, 1.5T range extender"
-        },
-        "battery": {
-          "cs": "56,01 kWh",
-          "sk": "56,01 kWh",
-          "en": "56.01 kWh"
-        },
-        "acceleration": {
-          "cs": "5,5 s",
-          "sk": "5,5 s",
-          "en": "5.5 s"
+        "consumption": "TODO",
+        "seats": "TODO",
+        "wheelbase": "2820 mm",
+        "warranty": "TODO",
+        "dimensions": "5020 × 1945 × 1760 mm"
+      },
+      "_source": "aitoauto.com/en/aito7 (listopad 2026), web uvádí jen rozměry, rozvor a pohon. Výkon, dojezd a počet míst doplnit od výrobce."
+    },
+    {
+      "brand": "aito",
+      "slug": "5",
+      "name": "AITO 5",
+      "powertrain": "erev",
+      "priceFrom": 0,
+      "priceFromEur": 0,
+      "specs": {
+        "power": "TODO",
+        "torque": "TODO",
+        "drive": {
+          "cs": "4×4, dva elektromotory",
+          "sk": "4×4, dva elektromotory",
+          "en": "AWD, dual electric motors"
         },
         "consumption": "TODO",
-        "seats": {
-          "cs": "6 nebo 7",
-          "sk": "6 alebo 7",
-          "en": "6 or 7"
-        },
-        "wheelbase": "3010 mm",
-        "warranty": "TODO",
-        "range": {
-          "cs": "1115 km (WLTC), z toho 235 km na elektřinu",
-          "sk": "1115 km (WLTC), z toho 235 km na elektrinu",
-          "en": "1,115 km (WLTC), incl. 235 km electric"
-        },
-        "dimensions": "5295 × 1980 × 1869 mm"
+        "seats": "TODO",
+        "dimensions": "TODO",
+        "wheelbase": "TODO",
+        "warranty": "TODO"
       },
-      "_source": "roxmotor.com/en/rox01/configuration (listopad 2026), verze pro globální trh – ověřit pro EU"
+      "_source": "aitoauto.com/en/aito5 (listopad 2026), web uvádí jen pohon (range extender, 4×4, dva elektromotory). Ostatní údaje doplnit od výrobce."
     },
     {
       "brand": "dfsk",

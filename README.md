@@ -1,6 +1,6 @@
 # silkroutemobility.com – statický web
 
-Prezentační web Silk Route Mobility, oficiálního importéra ROX a DFSK pro ČR a SK.
+Prezentační web Silk Route Mobility, oficiálního importéra AITO a DFSK pro ČR a SK.
 Čisté HTML, CSS a JavaScript. Žádný framework, databáze ani WordPress. Na serveru nic neběží.
 
 ---
@@ -26,7 +26,7 @@ Totéž přes npm: `npm run build`, `npm run serve`, `npm run check`, `npm run s
 
 **Na hosting přes FTP nahrajte celý obsah složky `dist/`** do kořene webu (tam, kde byl WordPress):
 
-- `dist/index.html`, `rox.html`, `dfsk.html`, `kontakt.html`, `404.html`, `ochrana-osobnich-udaju.html`
+- `dist/index.html`, `aito.html`, `dfsk.html`, `kontakt.html`, `404.html`, `ochrana-osobnich-udaju.html`
 - složky `sk/`, `en/`, `assets/`
 - `sitemap.xml`, `robots.txt`, `llms.txt` (+ `sk/llms.txt`, `en/llms.txt`), `site.webmanifest`, `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `og-image.jpg`
 - **skrytý soubor `.htaccess`**. Ve FTP klientovi zapněte zobrazení skrytých souborů (FileZilla: Server → Vynutit zobrazení skrytých souborů).
@@ -71,18 +71,20 @@ Formáty:
 | Soubor | Rozměr (px) | Použití |
 |---|---|---|
 | `home-hero.jpg` | 2560 × 1440 | Hero úvodní stránky 16:9 – **teď dočasná neutrální ilustrační fotka** (hala s auty) s popiskem „Ilustrační foto“ |
-| `brand-rox.jpg` | 1600 × 2000 | Blok ROX v sekci Značky, 4:5 |
+| `brand-aito.jpg` | 1600 × 2000 | Blok AITO na úvodní stránce, 4:5 |
 | `brand-dfsk.jpg` | 1600 × 2000 | Blok DFSK v sekci Značky, 4:5 |
-| `model-rox-adamas.png` | 2000 × 1000 | Výřez auta (průhledné pozadí), 2:1 |
-| `model-rox-01.png` | 2000 × 1000 | Výřez auta, 2:1 |
+| `model-aito-9.png` | 2000 × 1000 | Výřez auta (průhledné pozadí), 2:1 |
+| `model-aito-7.png` | 2000 × 1000 | Výřez auta, 2:1 |
+| `model-aito-5.png` | 2000 × 1000 | Výřez auta, 2:1 |
 | `model-dfsk-500.png` | 2000 × 1000 | Výřez auta, 2:1 |
 | `model-dfsk-600.png` | 2000 × 1000 | Výřez auta, 2:1 |
 | `model-dfsk-e5.png` | 2000 × 1000 | Výřez auta, 2:1 |
 | `showroom.jpg` | 1600 × 2000 | Sekce Showroom, 4:5 – **teď dočasná neutrální ilustrační fotka** s popiskem „Ilustrační foto“ |
-| `rox-hero.jpg` | 2560 × 1440 | Hero stránky ROX, 16:9 |
+| `aito-hero.jpg` | 2560 × 1440 | Hero stránky AITO, 16:9 |
 | `dfsk-hero.jpg` | 2560 × 1440 | Hero stránky DFSK, 16:9 |
-| `gallery-rox-adamas-1.jpg` … `-4.jpg` | 1920 × 1080 | Galerie ROX ADAMAS (4 ks) |
-| `gallery-rox-01-1.jpg` … `-4.jpg` | 1920 × 1080 | Galerie ROX 01 (4 ks) |
+| `gallery-aito-9-1.jpg` … `-4.jpg` | 1920 × 1080 | Galerie AITO 9 (4 ks) |
+| `gallery-aito-7-1.jpg` … `-4.jpg` | 1920 × 1080 | Galerie AITO 7 (4 ks) |
+| `gallery-aito-5-1.jpg` … `-4.jpg` | 1920 × 1080 | Galerie AITO 5 (4 ks) |
 | `gallery-dfsk-500-1.jpg` … `-3.jpg` | 1920 × 1080 | Galerie DFSK 500 (3 ks) |
 | `gallery-dfsk-600-1.jpg` … `-3.jpg` | 1920 × 1080 | Galerie DFSK 600 (3 ks) |
 | `gallery-dfsk-e5-1.jpg` … `-3.jpg` | 1920 × 1080 | Galerie DFSK E5 (3 ks) |
@@ -92,15 +94,15 @@ Počet fotek v galerii se mění v `src/data/images.json`. Přidejte řádek `ga
 **Hero video** (volitelné): `src/assets/video/home-hero.webm` + `home-hero.mp4`, smyčka 10–20 s, bez zvuku, do ~3 MB, 1920 × 1080. Přehrává se jen na počítači. Na mobilu a v úsporném režimu zůstane fotka `home-hero.jpg`, ta slouží i jako poster.
 
 **Loga:** logo Silk Route Mobility je **dočasné** (typografický logotyp v `src/templates/partials/logo.html`, favicon v `src/root/favicon.svg`). Ikony a `og-image.jpg` v `src/root/` po dodání finálního loga vyměňte.
-- **ROX:** oficiální SVG z roxmotor.com, vložené přímo do stránky v `src/templates/partials/brand-logo.html`. Barvu přebírá z okolního textu.
+- **AITO:** oficiální SVG z aitoauto.com, vložené přímo do stránky v `src/templates/partials/brand-logo.html`. Barvu přebírá z okolního textu.
 - **DFSK:** bílé PNG z dfskcars.cz (`src/assets/img/logo-dfsk.png`, 304 × 55 px). Je malé, takže na displejích s vysokým rozlišením je trochu měkké. Doporučujeme vyžádat si od výrobce vektorové logo (SVG) a vyměnit ho.
 
 ### Aktuální fotky a jejich zdroj (listopad 2026)
-Fotky, výřezy aut a loga jsou převzaté z oficiálních webů výrobců (roxmotor.com a dfskcars.cz) se svolením Silk Route Mobility jako importéra. Zdroj každého obrázku je v `src/data/images.json` u položky `source`. Obrázky jsou ořezané na poměr stran webu a uložené ve formátu JPG/PNG a WebP s menšími variantami pro mobil.
+Fotky, výřezy aut a loga jsou převzaté z oficiálních webů výrobců (aitoauto.com a dfskcars.cz) se svolením Silk Route Mobility jako importéra. Zdroj každého obrázku je v `src/data/images.json` u položky `source`. Obrázky jsou ořezané na poměr stran webu a uložené ve formátu JPG/PNG a WebP s menšími variantami pro mobil.
 
-- **ROX:** zdroje ve vysokém rozlišení (2560–3840 px), kvalita výborná.
+- **AITO:** zdroje ve vysokém rozlišení (2700–3840 px), kvalita výborná.
 - **DFSK:** zdroje jsou malé (max. 1605 px, výřezy aut 667–1013 px). Nic se nezvětšovalo, takže velké plochy (hero stránky DFSK, panel DFSK v sekci Značky, výřez DFSK 500) jsou na velkých monitorech měkčí. **Doporučení:** vyžádat si od DFSK tiskové fotky ve vysokém rozlišení a vyměnit je.
-- **Úvodní fotka a Showroom** (`home-hero.jpg`, `showroom.jpg`) mají zatím **dočasnou neutrální fotku** haly s auty bez vazby na ROX/DFSK, s viditelným popiskem „Ilustrační foto“. Zdroj: [U.S. Department of Energy / NREL na Flickru](https://www.flickr.com/photos/departmentofenergy/51172720513/), volné dílo (dílo vlády USA), komerční použití je povolené. Co nejdřív je nahraďte fotkami vlastního showroomu a servisu a pak smažte oba popisky (`photo-note` v `src/templates/pages/index.html`).
+- **Úvodní fotka a Showroom** (`home-hero.jpg`, `showroom.jpg`) mají zatím **dočasnou neutrální fotku** haly s auty bez vazby na AITO/DFSK, s viditelným popiskem „Ilustrační foto“. Zdroj: [U.S. Department of Energy / NREL na Flickru](https://www.flickr.com/photos/departmentofenergy/51172720513/), volné dílo (dílo vlády USA), komerční použití je povolené. Co nejdřív je nahraďte fotkami vlastního showroomu a servisu a pak smažte oba popisky (`photo-note` v `src/templates/pages/index.html`).
 
 ---
 
@@ -119,17 +121,18 @@ Vše v `src/data/site.json` → `company`:
 - [ ] `social`: odkazy na Instagram, Facebook, YouTube (teď `#`). Nepoužívané sítě smažte i z `src/templates/partials/footer.html`.
 
 ### Ceny
-- [ ] ROX ADAMAS a ROX 01: `priceFrom` (Kč) – zatím `0` → „Cena brzy“
+- [ ] AITO 9, AITO 7 a AITO 5: `priceFrom` (Kč) – zatím `0` → „Cena brzy“
 - [ ] Všechny modely: `priceFromEur` (€ pro SK) – zatím `0`
 - [ ] DFSK 500 / 600 / E5: ceny 550 000 / 699 000 / 879 000 Kč jsou **předběžné** (převzaté z dfskcars.cz, listopad 2026). Ověřit.
 
 ### Technické údaje
 Údaje jsou převzaté z webů výrobců (zdroj je u každého modelu v `site.json`, pole `_source`). Pořád chybí (`"TODO"`, na webu „upřesníme“):
 - [ ] **spotřeba** u všech modelů (weby výrobců ji neuvádějí)
-- [ ] **záruka ROX** (web výrobce ji neuvádí). U DFSK je 5 let podle zadání. Na dfskcars.cz jsou odkazy na záruční dokumenty, ale nefungují, takže to nešlo ověřit.
+- [ ] **AITO 7 a AITO 5:** výkon, točivý moment, počet míst, u AITO 5 i rozměry a rozvor. Web aitoauto.com/en je u těchto modelů neuvádí. U AITO 9 chybí kapacita baterie a zrychlení (řádky se na webu nezobrazí, dokud je nedoplníte).
+- [ ] **záruka AITO** (web výrobce ji neuvádí). U DFSK je 5 let podle zadání. Na dfskcars.cz jsou odkazy na záruční dokumenty, ale nefungují, takže to nešlo ověřit.
 
 K ověření:
-- [ ] **ROX:** údaje jsou z globálního webu roxmotor.com/en (emisní norma Euro V, verze pro globální trh). Pro evropskou homologaci se mohou lišit, ověřit u výrobce.
+- [ ] **AITO:** údaje jsou z globálního webu aitoauto.com/en (verze pro globální trh, dojezd AITO 9 v cyklu NEDC, ne WLTP). Pro evropskou homologaci se mohou lišit, ověřit u výrobce.
 - [ ] **DFSK – nesrovnalosti přímo na dfskcars.cz.** Použili jsme hodnoty z tabulky parametrů:
   - DFSK 500: v záhlaví stránky je „114 HP“, v tabulce 85 kW / 115 hp
   - DFSK 600: v textu je „135 kW“, v tabulce 130 kW / 177 hp
@@ -137,17 +140,17 @@ K ověření:
 
 ### Obsah
 - [ ] všechny fotky ze seznamu výše + případně hero video
-- [ ] oficiální logo Silk Route Mobility a loga ROX / DFSK
+- [ ] oficiální logo Silk Route Mobility a loga AITO / DFSK
 - [ ] přečíst a schválit texty ve všech třech jazycích. Hlavně tvrzení, která jsme odhadli: asistence 24/7, originální díly přímo od výrobce, servis i pneuservis na stejné adrese jako showroom.
 - [ ] ochrana osobních údajů: nechat zkontrolovat právníkem (teď základní text pro web bez cookies a formulářů)
 
 ### Předpoklady, které jsme udělali (změňte, pokud neplatí)
 - Showroom, servis i pneuservis jsou na **jedné adrese** (web má jedno `address`).
 - Slovenská verze ukazuje ceny v €, anglická v Kč i €. Když EN cena v jedné měně chybí, ukáže se jen ta známá. Když chybí obě, ukáže se „Price coming soon“.
-- Názvy souborů jsou ve všech jazycích stejné (`/sk/kontakt.html`, `/en/rox.html`).
+- Názvy souborů jsou ve všech jazycích stejné (`/sk/kontakt.html`, `/en/aito.html`).
 - Pohon modelu je v `site.json` uložený jako kód (`petrol`, `phev`), aby šel přeložit. Hodnoty a překlady jsou v `i18n/*.json` → `powertrain`.
 - Schema.org: `AutoDealer` + `Organization` s českou adresou a `areaServed` CZ a SK. Je na úvodní a kontaktní stránce.
-- Akcenty značek: ROX jemná olivová (outdoor), DFSK ocelově šedá. Obojí jen v drobných detailech.
+- Akcenty značek: AITO chladná šedomodrá, DFSK ocelově šedá. Obojí jen v drobných detailech.
 - Pro text na světlém pozadí jsou tmavší odstíny `--sand-deep` a `--copper-deep`. Původní `--sand` a `--copper` by na světlé ploše nesplnily kontrast WCAG AA.
 
 ---
@@ -168,9 +171,9 @@ Staré adresy WordPressu (`/?p=…`, `/sample-page/`, `/wp-admin`, `/feed/`, `/c
 ---
 
 **Úpravy struktury (listopad 2026):**
-- Hlavní nadpis je „Oficiální importér ROX a DFSK“, pod ním je napsáno, co firma dělá.
-- ROX a DFSK mají na úvodní stránce každá vlastní sekci (02 / ROX, 03 / DFSK) se svými modely. V menu jsou zvlášť odkazy ROX a DFSK.
-- Servis a pneuservis jsou prezentované pro auta všech značek. Záruční servis, originální díly a asistence 24/7 platí jen pro ROX a DFSK.
+- Hlavní nadpis je „Oficiální importér AITO a DFSK“, pod ním je napsáno, co firma dělá.
+- AITO a DFSK mají na úvodní stránce každá vlastní sekci (02 / AITO, 03 / DFSK) se svými modely. V menu jsou zvlášť odkazy AITO a DFSK.
+- Servis a pneuservis jsou prezentované pro auta všech značek. Záruční servis, originální díly a asistence 24/7 platí jen pro AITO a DFSK.
 - Web nezmiňuje původ značek ani Hedvábnou stezku.
 
 **Zjednodušení (listopad 2026):** na přání jsme z webu odstranili linku trasy přes stránku, souřadnice u sekcí, mapu Eurasie se zastávkami, vlastní kurzor a plovoucí náhledy fotek v sekci Servis. Fotky `service-*.jpg` už web nepotřebuje.
@@ -236,7 +239,7 @@ src/root/              soubory do kořene webu (.htaccess, ikony, manifest, og-i
 - [ ] `/neexistuje` ukáže českou 404, `/sk/neexistuje` slovenskou
 - [ ] přepínač CZ / SK / EN, tlačítka „Otevřít v Google Maps / Mapy.cz“, `tel:` a `mailto:` odkazy na mobilu
 - [ ] bezpečnostní hlavičky: [securityheaders.com](https://securityheaders.com) (očekávané hodnocení A)
-- [ ] strukturovaná data: [Rich Results Test](https://search.google.com/test/rich-results) pro úvod a stránky ROX / DFSK
+- [ ] strukturovaná data: [Rich Results Test](https://search.google.com/test/rich-results) pro úvod a stránky AITO / DFSK
 - [ ] `https://silkroutemobility.com/llms.txt` se otevře jako text s aktuálními údaji
 
 ### Po ověření HTTPS
@@ -247,7 +250,7 @@ src/root/              soubory do kořene webu (.htaccess, ikony, manifest, og-i
 - **`llms.txt`** (CZ, `/sk/`, `/en/`): souhrn firmy, kontaktů, modelů s cenami a údaji, služeb a stránek v Markdownu. Generuje se ze `site.json` a `i18n`, po změně ceny se aktualizuje sám.
 - **Schema.org:**
   - úvod: `Organization`, `AutoDealer` (s oddělením `AutoRepair`) a `ItemList` modelů
-  - stránky ROX / DFSK: `Car` pro každý model, s `Offer` (cena od v CZK / EUR), jakmile je cena vyplněná
+  - stránky AITO / DFSK: `Car` pro každý model, s `Offer` (cena od v CZK / EUR), jakmile je cena vyplněná
   - kontakt: firma a provozovna
 - **`robots.txt`:** web je otevřený vyhledávačům i AI asistentům. Pokud nechcete, aby se obsah používal k **trénování** AI modelů, odkomentujte připravené bloky v `src/data/robots.txt` (GPTBot, ClaudeBot, Google-Extended …). Je to obchodní rozhodnutí klienta.
 - Veškerý obsah je ve statickém HTML, takže ho přečte i agent, který nespouští JavaScript.

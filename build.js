@@ -34,7 +34,7 @@ const i18n = Object.fromEntries(LANGS.map((l) => [l, readJSON(`i18n/${l}.json`)]
 // key = klíč v i18n.pages, file = výstupní soubor, tpl = šablona
 const PAGES = [
   { key: 'index',   file: 'index.html',                   tpl: 'index.html',   sitemap: 1.0 },
-  { key: 'rox',     file: 'rox.html',                     tpl: 'brand.html',   sitemap: 0.9, brand: 'rox' },
+  { key: 'aito',     file: 'aito.html',                     tpl: 'brand.html',   sitemap: 0.9, brand: 'aito' },
   { key: 'dfsk',    file: 'dfsk.html',                    tpl: 'brand.html',   sitemap: 0.9, brand: 'dfsk' },
   { key: 'kontakt', file: 'kontakt.html',                 tpl: 'kontakt.html', sitemap: 0.8 },
   { key: 'privacy', file: 'ochrana-osobnich-udaju.html',  tpl: 'privacy.html', sitemap: 0.2 },
@@ -416,7 +416,7 @@ function schemaJSON(lang, page) {
       geo: { '@type': 'GeoCoordinates', latitude: c.geo.lat, longitude: c.geo.lng },
       openingHoursSpecification: spec('showroom'),
       areaServed,
-      brand: [{ '@type': 'Brand', name: 'ROX' }, { '@type': 'Brand', name: 'DFSK' }],
+      brand: [{ '@type': 'Brand', name: 'AITO' }, { '@type': 'Brand', name: 'DFSK' }],
       parentOrganization: { '@id': `${base}/#organization` },
       department: [{
         '@type': 'AutoRepair',
@@ -434,7 +434,7 @@ function schemaJSON(lang, page) {
   if (page && page.key === 'index') {
     graph.push({
       '@type': 'ItemList',
-      name: t.meta.siteName + ' – ROX, DFSK',
+      name: t.meta.siteName + ' – AITO, DFSK',
       itemListElement: site.models.map((m, i) => ({
         '@type': 'ListItem', position: i + 1, name: m.name, url: base + urlFor(m.brand, lang, m.slug),
       })),
@@ -458,7 +458,7 @@ function carSchema(m, lang) {
     '@id': `${base}${urlFor(m.brand, lang, m.slug)}`,
     name: m.name,
     brand: { '@type': 'Brand', name: m.brand.toUpperCase() },
-    model: m.name.replace(/^(ROX|DFSK)\s+/, ''),
+    model: m.name.replace(/^(AITO|DFSK)\s+/, ''),
     url: base + urlFor(m.brand, lang, m.slug),
     description: t.brand[m.brand].models[m.slug],
     itemCondition: 'https://schema.org/NewCondition',
@@ -621,7 +621,7 @@ function buildLlms() {
     out.push(`- ${l.ico}: ${c.ico}`);
     out.push(`- ${l.hours} – ${strip(t.common.hoursShowroom)}: ${hrs('showroom')}`, `- ${l.hours} – ${strip(t.common.hoursService)}: ${hrs('service')}`, '');
     out.push(`## ${l.models}`, '', l.note, '');
-    for (const b of ['rox', 'dfsk']) {
+    for (const b of ['aito', 'dfsk']) {
       out.push(`### ${b.toUpperCase()}`, '', strip(t.brand[b].story[0]), '');
       for (const m of site.models.filter((x) => x.brand === b)) {
         const specs = ['powertrain', 'engine', 'power', 'torque', 'transmission', 'drive', 'battery', 'range', 'consumption', 'acceleration', 'dimensions', 'seats', 'warranty']
@@ -641,7 +641,7 @@ function buildLlms() {
     out.push('');
     out.push(`## ${l.pages}`, '');
     out.push(`- [${strip(t.pages.index.title)}](${abs('index', lang)})`);
-    out.push(`- [ROX](${abs('rox', lang)}): ${strip(t.pages.rox.description)}`);
+    out.push(`- [AITO](${abs('aito', lang)}): ${strip(t.pages.aito.description)}`);
     out.push(`- [DFSK](${abs('dfsk', lang)}): ${strip(t.pages.dfsk.description)}`);
     out.push(`- [${strip(t.contactPage.title)}](${abs('kontakt', lang)}): ${strip(t.pages.kontakt.description)}`);
     out.push(`- [${strip(t.privacy.title)}](${abs('privacy', lang)})`, '');

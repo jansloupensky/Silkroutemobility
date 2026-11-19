@@ -1,5 +1,7 @@
 # Zadání: web silkroutemobility.com
 
+> Pozn. (19. 11. 2026): první značka byla na přání klienta změněna na AITO (aitoauto.com). Zadání je tomu přizpůsobené.
+
 > Tento dokument je kompletní zadání pro Claude Code. Před psaním kódu si ho přečti celý, sepiš krátký plán (struktura souborů, sekce, animace) a pak stav po fázích podle oddílu 12.
 
 ---
@@ -8,7 +10,7 @@
 
 **Silk Route Mobility** je oficiální importér a distributor dvou automobilových značek pro Českou republiku (a Slovensko):
 
-- **ROX**: prémiová terénní SUV pro cestovatele. Modely **ROX ADAMAS** a **ROX 01**. Reference: https://www.roxmotor.com/en
+- **AITO**: prémiová SUV s range extenderem. Modely **AITO 9**, **AITO 7** a **AITO 5**. Reference: https://aitoauto.com/en/
 - **DFSK**: dostupná SUV s pětiletou zárukou. Modely **DFSK 500**, **DFSK 600** a **DFSK E5** (plug-in hybrid). Reference: https://dfskcars.cz
 
 Firma provozuje **showroom**, **servis** a **pneuservis**.
@@ -54,7 +56,7 @@ Firma provozuje **showroom**, **servis** a **pneuservis**.
 **Fáze 1:**
 
 1. `index.html`: hlavní dlouhá stránka (viz oddíl 7)
-2. `rox.html`: stránka značky ROX s oběma modely
+2. `aito.html`: stránka značky AITO se všemi třemi modely
 3. `dfsk.html`: stránka značky DFSK se třemi modely
 4. `kontakt.html`: kontakty, adresa, otevírací doba, mapa
 5. `404.html`
@@ -86,8 +88,9 @@ Všechny údaje, které se budou měnit, patří do `src/data/site.json`. Nesmí
     "social": { "instagram": "#", "facebook": "#", "youtube": "#" }
   },
   "models": [
-    { "brand": "rox",  "slug": "adamas", "name": "ROX ADAMAS", "powertrain": "TODO", "priceFrom": 0 },
-    { "brand": "rox",  "slug": "01",     "name": "ROX 01",     "powertrain": "TODO", "priceFrom": 0 },
+    { "brand": "aito", "slug": "9", "name": "AITO 9", "powertrain": "TODO", "priceFrom": 0 },
+    { "brand": "aito", "slug": "7", "name": "AITO 7", "powertrain": "TODO", "priceFrom": 0 },
+    { "brand": "aito", "slug": "5", "name": "AITO 5", "powertrain": "TODO", "priceFrom": 0 },
     { "brand": "dfsk", "slug": "500",    "name": "DFSK 500",   "powertrain": "benzín",           "priceFrom": 550000 },
     { "brand": "dfsk", "slug": "600",    "name": "DFSK 600",   "powertrain": "benzín",           "priceFrom": 699000 },
     { "brand": "dfsk", "slug": "e5",     "name": "DFSK E5",    "powertrain": "plug-in hybrid",   "priceFrom": 879000 }
@@ -96,7 +99,7 @@ Všechny údaje, které se budou měnit, patří do `src/data/site.json`. Nesmí
 ```
 
 - **Všechny kontakty jsou zatím smyšlené (mock).** Majitel je doplní později. Pro jistotu je v kódu označ komentářem `<!-- TODO: mock -->` a vypiš je v README.
-- Ceny DFSK jsou převzaté z dfskcars.cz (stav listopad 2026) a jsou **předběžné**. Ceny ROX zatím nejsou známé. Dokud je `priceFrom` rovno 0, zobraz „Cena brzy“ (SK „Cena čoskoro“, EN „Price coming soon“).
+- Ceny DFSK jsou převzaté z dfskcars.cz (stav listopad 2026) a jsou **předběžné**. Ceny AITO zatím nejsou známé. Dokud je `priceFrom` rovno 0, zobraz „Cena brzy“ (SK „Cena čoskoro“, EN „Price coming soon“).
 - Cenu formátuj podle jazyka: `od 550 000 Kč` / `od 550 000 Kč` / `from CZK 550,000`. Pod ceník přidej malou poznámku „Ceny jsou orientační, včetně DPH.“
 
 ---
@@ -110,7 +113,7 @@ To je nejdůležitější část zadání. Web má působit jako práce dobrého
 Název firmy odkazuje na historickou obchodní cestu z Číny do Evropy. Tou cestou dnes jezdí i tato auta. Celý web je **cesta**:
 
 - Signaturní prvek: **tenká linka trasy**, která se při scrollu postupně kreslí přes stránku (SVG `stroke-dashoffset` + ScrollTrigger). Vede od východu k Praze a u jednotlivých sekcí má „zastávky“ s malým popiskem souřadnic nebo místa (monospace písmem, decentně).
-- Sekce jsou číslované jako etapy cesty (`01 / Značky`, `02 / ROX`…), ne obecnými nadpisy.
+- Sekce jsou číslované jako etapy cesty (`01 / Značky`, `02 / AITO`…), ne obecnými nadpisy.
 - Tón textů: věcný, sebevědomý, krátké věty. Žádný marketingový patos.
 
 ### 6.2 Barvy
@@ -174,7 +177,7 @@ Logo Silk Route Mobility se vykreslí tahem, pod ním běží počítadlo 0–10
 - Celoobrazovkové video nebo fotka auta v krajině (`100svh`). Video: smyčka, ztlumené, `playsinline`, WebM + MP4, s posterem. Na mobilu a při úsporném režimu jen fotka.
 - Velký nadpis se po písmenech nebo slovech vysune z masky (SplitText).
 - Nadpis (návrh): **„Z Východu. Na vaše cesty.“** / SK „Z Východu. Na vaše cesty.“ / EN „From the East. For your journeys.“
-- Podtitulek: „Oficiální importér ROX a DFSK pro Českou republiku a Slovensko.“
+- Podtitulek: „Oficiální importér AITO a DFSK pro Českou republiku a Slovensko.“
 - Při scrollu se obraz mírně přibližuje (scale 1 → 1,1) a ztmavuje. Text odjíždí rychleji než pozadí (parallax).
 - Dole indikátor scrollu: tenká linka, po které jede tečka. Tady začíná trasa z 6.1.
 
@@ -182,7 +185,7 @@ Logo Silk Route Mobility se vykreslí tahem, pod ním běží počítadlo 0–10
 Krátký odstavec o firmě. Text se při scrollu „rozsvěcuje“ slovo po slově (z opacity 0,15 na 1, vázáno na scroll). Vedle je tenká mapa Eurasie z teček nebo linek, po které se vykreslí trasa z Číny do Prahy.
 
 ### 7.4 `02 / Značky`
-Dva velké bloky vedle sebe (na mobilu pod sebou): ROX a DFSK. Na desktopu se blok po najetí myší rozšíří (flex-grow) a druhý zúží. Na pozadí je fotka auta, logo značky a jedna věta o značce. Odkaz vede na stránku značky.
+Dva velké bloky vedle sebe (na mobilu pod sebou): AITO a DFSK. Na desktopu se blok po najetí myší rozšíří (flex-grow) a druhý zúží. Na pozadí je fotka auta, logo značky a jedna věta o značce. Odkaz vede na stránku značky.
 
 ### 7.5 `03 / Modely`
 **Horizontální scroll** připnutý přes ScrollTrigger (pin): při svislém scrollu jedou modely do strany. Každý model má:
@@ -209,7 +212,7 @@ Dvě sekce, každá s jiným layoutem:
 - **Mapa:** stylizovaný statický obrázek (SVG nebo tmavá upravená mapa jako obrázek) s pinem a tlačítky „Otevřít v Google Maps“ / „Otevřít v Mapy.cz“. Žádný iframe.
 
 ### 7.9 Patička
-Velké logo nebo nápis přes celou šířku, který se při doscrollování „usadí“. Pod ním odkazy, jazyky, sociální sítě, IČO, © rok (generovat buildem) a odkaz na ochranu osobních údajů. Poznámka: „ROX a DFSK jsou ochranné známky svých vlastníků.“
+Velké logo nebo nápis přes celou šířku, který se při doscrollování „usadí“. Pod ním odkazy, jazyky, sociální sítě, IČO, © rok (generovat buildem) a odkaz na ochranu osobních údajů. Poznámka: „AITO a DFSK jsou ochranné známky svých vlastníků.“
 
 ### 7.10 Navigace
 - Fixní hlavička, při scrollu dolů se schová a při scrollu nahoru se ukáže.
@@ -219,13 +222,13 @@ Velké logo nebo nápis přes celou šířku, který se při doscrollování „
 
 ---
 
-## 8. Stránky značek (`rox.html`, `dfsk.html`)
+## 8. Stránky značek (`aito.html`, `dfsk.html`)
 
 - Hero s autem značky a velkým názvem.
 - Krátký příběh značky (2–3 odstavce, vlastními slovy, žádné kopírování z webů výrobců).
 - Každý model jako samostatná sekce s kotvou (`#adamas`, `#01`, `#500`, `#600`, `#e5`): galerie (posuvník s tažením myší i prstem), tabulka technických údajů, cena od, záruka.
 - Výrazná výzva na konci: „Přijďte se podívat do showroomu“ + telefon.
-- ROX laď víc do outdooru a dobrodružství, DFSK víc do praktičnosti a hodnoty za peníze. Obě ale ve stejném designovém systému.
+- AITO laď víc do outdooru a dobrodružství, DFSK víc do praktičnosti a hodnoty za peníze. Obě ale ve stejném designovém systému.
 
 ---
 
@@ -314,8 +317,8 @@ Připrav do `dist/` soubor `.htaccess`:
 Majitel zatím **nedodal žádné podklady**. Proto:
 
 - **Logo Silk Route Mobility:** zatím vytvoř jednoduchý typografický logotyp (název v Archivo Expanded + malý symbol trasy) v SVG, jasně jako dočasný.
-- **Loga ROX a DFSK:** zástupný text s názvem značky v jednotném stylu. Oficiální loga dodá importér od výrobce. **Nestahuj** je z cizích webů.
-- **Fotky a videa aut:** **nestahuj a nehotlinkuj** obrázky z webů výrobců a **negeneruj** AI obrázky aut. Použij elegantní zástupné plochy (tmavý gradient + jemná linka + popisek „ROX ADAMAS – foto 16:9“) ve správném poměru stran, aby šly později jen vyměnit soubory se stejným názvem. Do README dej seznam všech potřebných obrázků s rozměry a názvy souborů.
+- **Loga AITO a DFSK:** zástupný text s názvem značky v jednotném stylu. Oficiální loga dodá importér od výrobce. **Nestahuj** je z cizích webů.
+- **Fotky a videa aut:** **nestahuj a nehotlinkuj** obrázky z webů výrobců a **negeneruj** AI obrázky aut. Použij elegantní zástupné plochy (tmavý gradient + jemná linka + popisek „AITO 9 – foto 16:9“) ve správném poměru stran, aby šly později jen vyměnit soubory se stejným názvem. Do README dej seznam všech potřebných obrázků s rozměry a názvy souborů.
 - **Technické údaje modelů:** kde nejsou jisté, dej `TODO` a v README je vypiš. Nic si nevymýšlej.
 - **Texty:** napiš je sám (CZ, SK, EN) podle tónu z oddílu 6.1. Krátké, konkrétní, bez klišé. Žádné smyšlené statistiky, roky na trhu ani počty zákazníků.
 

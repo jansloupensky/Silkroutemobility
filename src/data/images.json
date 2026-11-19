@@ -12,12 +12,12 @@
       "temporary": "DOČASNÉ – neutrální ilustrační foto (hala s auty), nahradit fotkou vlastního showroomu/servisu"
     },
     {
-      "id": "brand-rox",
-      "file": "brand-rox",
-      "w": 1152,
-      "h": 1440,
-      "label": "ROX – foto 4:5",
-      "source": "https://prd-file.roxmotor.com/rox-website/adamas/sellingPoint/2.jpg"
+      "id": "brand-aito",
+      "file": "brand-aito",
+      "w": 1600,
+      "h": 2000,
+      "label": "AITO – foto 4:5",
+      "source": "https://aitoauto.com/website-resources/global/images/aito9/p19-1.webp"
     },
     {
       "id": "brand-dfsk",
@@ -28,22 +28,31 @@
       "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-600-Driving.jpg"
     },
     {
-      "id": "model-adamas",
-      "file": "model-rox-adamas",
+      "id": "model-9",
+      "file": "model-aito-9",
       "w": 2000,
       "h": 1000,
-      "label": "ROX ADAMAS – výřez 2:1",
+      "label": "AITO 9 – výřez 2:1",
       "cutout": true,
-      "source": "https://prd-file.roxmotor.com/rox-website/home2/adamas.png"
+      "source": "https://aitoauto.com/website-resources/global/images/aito9/outer/Woodland%20Green.webp"
     },
     {
-      "id": "model-01",
-      "file": "model-rox-01",
+      "id": "model-7",
+      "file": "model-aito-7",
       "w": 2000,
       "h": 1000,
-      "label": "ROX 01 – výřez 2:1",
+      "label": "AITO 7 – výřez 2:1",
       "cutout": true,
-      "source": "https://prd-file.roxmotor.com/rox-website/home2/rox01.png"
+      "source": "https://aitoauto.com/website-resources/global/images/m7/outer/Space%20Grey.webp"
+    },
+    {
+      "id": "model-5",
+      "file": "model-aito-5",
+      "w": 2000,
+      "h": 1000,
+      "label": "AITO 5 – výřez 2:1",
+      "cutout": true,
+      "source": "https://aitoauto.com/website-resources/global/images/m5/outer/Midnight%20Black.webp"
     },
     {
       "id": "model-500",
@@ -83,12 +92,12 @@
       "license": "Volné dílo (dílo vlády USA, U.S. Department of Energy / NREL)"
     },
     {
-      "id": "rox-hero",
-      "file": "rox-hero",
+      "id": "aito-hero",
+      "file": "aito-hero",
       "w": 2560,
       "h": 1440,
-      "label": "ROX – hero 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/adamas/allTerrain/2_1.jpg"
+      "label": "AITO – hero 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/home/webp/page-1.webp"
     },
     {
       "id": "dfsk-hero",
@@ -99,68 +108,100 @@
       "source": "https://dfskcars.cz/wp-content/uploads/2025/05/DFSK-600-Driving.jpg"
     },
     {
-      "id": "gallery-adamas-1",
-      "file": "gallery-rox-adamas-1",
+      "id": "gallery-9-1",
+      "file": "gallery-aito-9-1",
       "w": 1920,
       "h": 1080,
-      "label": "ROX ADAMAS – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/adamas/sellingPoint/1.jpg"
+      "label": "AITO 9 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/aito9/p15-1.webp"
     },
     {
-      "id": "gallery-adamas-2",
-      "file": "gallery-rox-adamas-2",
+      "id": "gallery-9-2",
+      "file": "gallery-aito-9-2",
       "w": 1920,
       "h": 1080,
-      "label": "ROX ADAMAS – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/adamas/sellingPoint/5.jpg"
+      "label": "AITO 9 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/aito9/p2-1.webp"
     },
     {
-      "id": "gallery-adamas-3",
-      "file": "gallery-rox-adamas-3",
+      "id": "gallery-9-3",
+      "file": "gallery-aito-9-3",
       "w": 1920,
       "h": 1080,
-      "label": "ROX ADAMAS – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/adamas/outdoors/1.jpg"
+      "label": "AITO 9 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/aito9/p6-1.webp"
     },
     {
-      "id": "gallery-adamas-4",
-      "file": "gallery-rox-adamas-4",
+      "id": "gallery-9-4",
+      "file": "gallery-aito-9-4",
       "w": 1920,
       "h": 1080,
-      "label": "ROX ADAMAS – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/adamas/zuocang/1.jpg"
+      "label": "AITO 9 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/aito9/inner/Camel6.webp"
     },
     {
-      "id": "gallery-01-1",
-      "file": "gallery-rox-01-1",
+      "id": "gallery-7-1",
+      "file": "gallery-aito-7-1",
       "w": 1920,
       "h": 1080,
-      "label": "ROX 01 – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/chexing/banner4.png"
+      "label": "AITO 7 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m7/p2-1.webp"
     },
     {
-      "id": "gallery-01-2",
-      "file": "gallery-rox-01-2",
+      "id": "gallery-7-2",
+      "file": "gallery-aito-7-2",
       "w": 1920,
       "h": 1080,
-      "label": "ROX 01 – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/sheji/banner1.png"
+      "label": "AITO 7 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m7/p6-1.webp"
     },
     {
-      "id": "gallery-01-3",
-      "file": "gallery-rox-01-3",
-      "w": 1442,
-      "h": 811,
-      "label": "ROX 01 – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/quandixing/banner3_global"
+      "id": "gallery-7-3",
+      "file": "gallery-aito-7-3",
+      "w": 1920,
+      "h": 1080,
+      "label": "AITO 7 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m7/p11-1.webp"
     },
     {
-      "id": "gallery-01-4",
-      "file": "gallery-rox-01-4",
-      "w": 1439,
-      "h": 809,
-      "label": "ROX 01 – foto 16:9",
-      "source": "https://prd-file.roxmotor.com/rox-website/quanchangjing/banner5_global"
+      "id": "gallery-7-4",
+      "file": "gallery-aito-7-4",
+      "w": 1920,
+      "h": 1080,
+      "label": "AITO 7 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m7/p10-1.webp"
+    },
+    {
+      "id": "gallery-5-1",
+      "file": "gallery-aito-5-1",
+      "w": 1920,
+      "h": 1080,
+      "label": "AITO 5 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m5/p14-1.webp"
+    },
+    {
+      "id": "gallery-5-2",
+      "file": "gallery-aito-5-2",
+      "w": 1920,
+      "h": 1080,
+      "label": "AITO 5 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m5/p4-1.webp"
+    },
+    {
+      "id": "gallery-5-3",
+      "file": "gallery-aito-5-3",
+      "w": 1920,
+      "h": 1080,
+      "label": "AITO 5 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m5/p10-1.webp"
+    },
+    {
+      "id": "gallery-5-4",
+      "file": "gallery-aito-5-4",
+      "w": 1920,
+      "h": 1080,
+      "label": "AITO 5 – foto 16:9",
+      "source": "https://aitoauto.com/website-resources/global/images/m5/p7-1.webp"
     },
     {
       "id": "gallery-500-1",

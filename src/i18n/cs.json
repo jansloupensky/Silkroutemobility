@@ -7,13 +7,17 @@
     "siteName": "Silk Route Mobility"
   },
   "pages": {
-    "index": {
-      "title": "Silk Route Mobility – oficiální importér ROX a DFSK",
-      "description": "Oficiální importér ROX a DFSK pro Česko a Slovensko. Prodej nových vozů ROX a DFSK, servis a pneuservis pro všechny značky."
+    "404": {
+      "title": "Stránka nenalezena | Silk Route Mobility",
+      "description": "Tato stránka neexistuje."
     },
-    "rox": {
-      "title": "ROX – terénní SUV | Silk Route Mobility",
-      "description": "ROX ADAMAS a ROX 01: velká terénní SUV pro dlouhé cesty. Technické údaje, ceny a prohlídka v showroomu Silk Route Mobility."
+    "index": {
+      "title": "Silk Route Mobility – oficiální importér AITO a DFSK",
+      "description": "Oficiální importér AITO a DFSK pro Česko a Slovensko. Prodej nových vozů AITO a DFSK, servis a pneuservis pro všechny značky."
+    },
+    "aito": {
+      "title": "AITO – prémiová SUV | Silk Route Mobility",
+      "description": "AITO 9, AITO 7 a AITO 5: prémiová SUV s range extenderem. Technické údaje, ceny a prohlídka v showroomu Silk Route Mobility."
     },
     "dfsk": {
       "title": "DFSK – SUV s pětiletou zárukou | Silk Route Mobility",
@@ -26,10 +30,6 @@
     "privacy": {
       "title": "Ochrana osobních údajů | Silk Route Mobility",
       "description": "Jak Silk Route Mobility zachází s osobními údaji. Web nepoužívá cookies ani analytiku."
-    },
-    "404": {
-      "title": "Stránka nenalezena | Silk Route Mobility",
-      "description": "Tato stránka neexistuje."
     }
   },
   "nav": {
@@ -119,13 +119,13 @@
   },
   "home": {
     "hero": {
-      "title": "Oficiální importér ROX a DFSK",
-      "sub": "Prodej nových vozů ROX a DFSK. Servis a pneuservis pro auta všech značek."
+      "title": "Oficiální importér AITO a DFSK",
+      "sub": "Prodej nových vozů AITO a DFSK. Servis a pneuservis pro auta všech značek."
     },
     "about": {
       "label": "O nás",
       "title": "Prodej, servis a pneuservis na jednom místě",
-      "text": "Silk Route Mobility je oficiální importér značek ROX a DFSK pro Českou republiku a Slovensko. Nové vozy obou značek prodáváme ve vlastním showroomu. V servisu a pneuservisu se staráme o auta všech značek, u ROX a DFSK včetně záručních prohlídek a originálních dílů."
+      "text": "Silk Route Mobility je oficiální importér značek AITO a DFSK pro Českou republiku a Slovensko. Nové vozy obou značek prodáváme ve vlastním showroomu. V servisu a pneuservisu se staráme o auta všech značek, u AITO a DFSK včetně záručních prohlídek a originálních dílů."
     },
     "showroom": {
       "label": "Showroom",
@@ -135,12 +135,12 @@
     "service": {
       "label": "Servis",
       "title": "Servis pro všechny značky",
-      "intro": "Opravujeme a udržujeme auta všech značek. U ROX a DFSK děláme i záruční servis podle předpisu výrobce.",
+      "intro": "Opravujeme a udržujeme auta všech značek. U AITO a DFSK děláme i záruční servis podle předpisu výrobce.",
       "phoneLabel": "Objednání do servisu",
       "rows": [
         {
           "id": "warranty",
-          "name": "Záruční servis ROX a DFSK",
+          "name": "Záruční servis AITO a DFSK",
           "text": "Prohlídky a opravy podle předpisu výrobce, aby záruka zůstala v platnosti."
         },
         {
@@ -156,12 +156,12 @@
         {
           "id": "parts",
           "name": "Originální díly",
-          "text": "Pro ROX a DFSK díly přímo od výrobce."
+          "text": "Pro AITO a DFSK díly přímo od výrobce."
         },
         {
           "id": "assistance",
           "name": "Asistence 24/7",
-          "text": "Pro vozy ROX a DFSK: když auto na cestě nepojede, pomůžeme. Ve dne i v noci."
+          "text": "Pro vozy AITO a DFSK: když auto na cestě nepojede, pomůžeme. Ve dne i v noci."
         }
       ]
     },
@@ -209,17 +209,18 @@
     "galleryLabel": "Galerie",
     "ctaTitle": "Přijďte se podívat do showroomu",
     "ctaText": "Auta si u nás prohlédnete naživo. Zavolejte, ať vás čekáme.",
-    "rox": {
-      "title": "ROX",
-      "sub": "Terénní SUV pro dlouhé cesty.",
+    "aito": {
+      "title": "AITO",
+      "sub": "Prémiová SUV s range extenderem.",
       "story": [
-        "ROX staví velká SUV pro lidi, kteří cestují. Ne pro cestu do obchodu, ale pro trasy, kde se silnice mění v šotolinu a šotolina v brod.",
-        "Na pohled jsou ROX auta hranatá, robustní a klidná. Uvnitř nabízejí místo a pohodlí na celodenní přesuny.",
+        "Název AITO znamená Adding Intelligence to Auto. Značka staví prémiová SUV, ve kterých luxus znamená hlavně pohodlí, bezpečnost a techniku, která řidiči opravdu pomáhá.",
+        "Všechny tři modely jezdí na elektřinu. Na delší cesty mají range extender, malý benzinový motor, který za jízdy vyrábí proud. Nabíječku tak nemusíte hledat ani cestou na dovolenou.",
         "Do Česka a na Slovensko je přiváží Silk Route Mobility. Prodej, servis i náhradní díly zajišťujeme sami."
       ],
       "models": {
-        "adamas": "Terénní SUV stavěné na výpravy.",
-        "01": "Velké SUV pro rodinu a dlouhé trasy."
+        "5": "Sportovní SUV střední velikosti.",
+        "7": "Velké SUV s důrazem na pohodlí celé rodiny.",
+        "9": "Vlajková loď značky. Velké SUV pro pět nebo šest lidí."
       }
     },
     "dfsk": {
@@ -277,15 +278,15 @@
     "text": "Stránka, kterou hledáte, neexistuje nebo se přesunula."
   },
   "footer": {
-    "tagline": "Oficiální importér ROX a DFSK pro Českou republiku a Slovensko.",
+    "tagline": "Oficiální importér AITO a DFSK pro Českou republiku a Slovensko.",
     "pages": "Stránky",
     "social": "Sítě",
     "privacy": "Ochrana osobních údajů",
-    "trademarks": "ROX a DFSK jsou ochranné známky svých vlastníků.",
+    "trademarks": "AITO a DFSK jsou ochranné známky svých vlastníků.",
     "rights": "Všechna práva vyhrazena.",
     "routeEnd": "Konec etapy"
   },
   "schema": {
-    "description": "Oficiální importér vozů ROX a DFSK pro Českou republiku a Slovensko. Showroom, servis a pneuservis."
+    "description": "Oficiální importér vozů AITO a DFSK pro Českou republiku a Slovensko. Showroom, servis a pneuservis."
   }
 }

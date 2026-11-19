@@ -430,7 +430,7 @@ html.menu-open { overflow: hidden; }
 
 
 /* Stránky bez tmavého hero (ochrana údajů …) mají hlavičku vždy s pozadím – kontrast loga a menu. */
-body:not(.page-index):not(.page-rox):not(.page-dfsk):not(.page-kontakt):not(.page-404) .site-header {
+body:not(.page-index):not(.page-aito):not(.page-dfsk):not(.page-kontakt):not(.page-404) .site-header {
   background: rgba(14, 13, 11, .94);
   border-bottom-color: var(--line);
 }

@@ -7,13 +7,17 @@
     "siteName": "Silk Route Mobility"
   },
   "pages": {
-    "index": {
-      "title": "Silk Route Mobility – official importer of ROX and DFSK",
-      "description": "Official importer of ROX and DFSK for the Czech Republic and Slovakia. New ROX and DFSK cars, plus service and tyres for every make."
+    "404": {
+      "title": "Page not found | Silk Route Mobility",
+      "description": "This page does not exist."
     },
-    "rox": {
-      "title": "ROX – off-road SUVs | Silk Route Mobility",
-      "description": "ROX ADAMAS and ROX 01: large off-road SUVs built for long journeys. Specifications, prices and a showroom visit at Silk Route Mobility."
+    "index": {
+      "title": "Silk Route Mobility – official importer of AITO and DFSK",
+      "description": "Official importer of AITO and DFSK for the Czech Republic and Slovakia. New AITO and DFSK cars, plus service and tyres for every make."
+    },
+    "aito": {
+      "title": "AITO – premium SUVs | Silk Route Mobility",
+      "description": "AITO 9, AITO 7 and AITO 5: premium range-extended SUVs. Specifications, prices and a showroom visit at Silk Route Mobility."
     },
     "dfsk": {
       "title": "DFSK – SUVs with a five-year warranty | Silk Route Mobility",
@@ -26,10 +30,6 @@
     "privacy": {
       "title": "Privacy policy | Silk Route Mobility",
       "description": "How Silk Route Mobility handles personal data. This website uses no cookies and no analytics."
-    },
-    "404": {
-      "title": "Page not found | Silk Route Mobility",
-      "description": "This page does not exist."
     }
   },
   "nav": {
@@ -119,13 +119,13 @@
   },
   "home": {
     "hero": {
-      "title": "Official importer of ROX and DFSK",
-      "sub": "New ROX and DFSK cars. Service and tyres for every make."
+      "title": "Official importer of AITO and DFSK",
+      "sub": "New AITO and DFSK cars. Service and tyres for every make."
     },
     "about": {
       "label": "About",
       "title": "Sales, service and tyres in one place",
-      "text": "Silk Route Mobility is the official importer of ROX and DFSK for the Czech Republic and Slovakia. We sell new cars from both brands in our own showroom. Our workshop and tyre centre look after cars of every make, and for ROX and DFSK that includes warranty inspections and genuine parts."
+      "text": "Silk Route Mobility is the official importer of AITO and DFSK for the Czech Republic and Slovakia. We sell new cars from both brands in our own showroom. Our workshop and tyre centre look after cars of every make, and for AITO and DFSK that includes warranty inspections and genuine parts."
     },
     "showroom": {
       "label": "Showroom",
@@ -135,12 +135,12 @@
     "service": {
       "label": "Service",
       "title": "Service for every make",
-      "intro": "We service and repair cars of every make. For ROX and DFSK we also carry out warranty service to the manufacturer’s schedule.",
+      "intro": "We service and repair cars of every make. For AITO and DFSK we also carry out warranty service to the manufacturer’s schedule.",
       "phoneLabel": "Book a service",
       "rows": [
         {
           "id": "warranty",
-          "name": "ROX and DFSK warranty service",
+          "name": "AITO and DFSK warranty service",
           "text": "Inspections and repairs to the manufacturer’s schedule, so your warranty stays valid."
         },
         {
@@ -156,12 +156,12 @@
         {
           "id": "parts",
           "name": "Genuine parts",
-          "text": "Parts for ROX and DFSK straight from the manufacturer."
+          "text": "Parts for AITO and DFSK straight from the manufacturer."
         },
         {
           "id": "assistance",
           "name": "24/7 assistance",
-          "text": "For ROX and DFSK owners: if your car stops on the road, we help. Day or night."
+          "text": "For AITO and DFSK owners: if your car stops on the road, we help. Day or night."
         }
       ]
     },
@@ -209,17 +209,18 @@
     "galleryLabel": "Gallery",
     "ctaTitle": "Come and see them in the showroom",
     "ctaText": "See the cars in person. Give us a call so we can expect you.",
-    "rox": {
-      "title": "ROX",
-      "sub": "Off-road SUVs for long journeys.",
+    "aito": {
+      "title": "AITO",
+      "sub": "Premium range-extended SUVs.",
       "story": [
-        "ROX builds large SUVs for people who travel. Not for the school run, but for routes where the road turns to gravel and the gravel turns to a river crossing.",
-        "ROX cars look square, sturdy and calm. Inside, they offer space and comfort for full days behind the wheel.",
+        "AITO stands for Adding Intelligence to Auto. The brand builds premium SUVs where luxury means comfort, safety and technology that genuinely helps the driver.",
+        "All three models drive on electricity. For longer trips they carry a range extender, a small petrol engine that generates power on the move, so you never have to hunt for a charger on the way to your holiday.",
         "Silk Route Mobility brings them to the Czech Republic and Slovakia. We handle sales, service and spare parts ourselves."
       ],
       "models": {
-        "adamas": "An off-road SUV built for expeditions.",
-        "01": "A large SUV for families and long distances."
+        "5": "A sporty mid-size SUV.",
+        "7": "A large SUV built around family comfort.",
+        "9": "The brand’s flagship. A large SUV for five or six."
       }
     },
     "dfsk": {
@@ -277,15 +278,15 @@
     "text": "The page you are looking for does not exist or has moved."
   },
   "footer": {
-    "tagline": "Official importer of ROX and DFSK for the Czech Republic and Slovakia.",
+    "tagline": "Official importer of AITO and DFSK for the Czech Republic and Slovakia.",
     "pages": "Pages",
     "social": "Social",
     "privacy": "Privacy policy",
-    "trademarks": "ROX and DFSK are trademarks of their respective owners.",
+    "trademarks": "AITO and DFSK are trademarks of their respective owners.",
     "rights": "All rights reserved.",
     "routeEnd": "End of stage"
   },
   "schema": {
-    "description": "Official importer of ROX and DFSK vehicles for the Czech Republic and Slovakia. Showroom, service and tyre centre."
+    "description": "Official importer of AITO and DFSK vehicles for the Czech Republic and Slovakia. Showroom, service and tyre centre."
   }
 }

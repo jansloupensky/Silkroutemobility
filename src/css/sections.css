@@ -65,7 +65,7 @@
   .about__text { grid-column: 6 / -1; }
 }
 
-/* ======================================================= 02 ROX / 03 DFSK */
+/* ======================================================= 02 AITO / 03 DFSK */
 .brand-sec__head { align-items: center; }
 .brand-sec__logo { display: block; height: clamp(30px, 1.6rem + 1.6vw, 52px); margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem); }
 .brand-sec__logo .brand-logo { color: var(--fg); }
@@ -81,7 +81,7 @@
   .brand-sec--dfsk .brand-sec__intro { grid-column: 7 / -1; grid-row: 1; }
   .brand-sec--dfsk .brand-sec__media { grid-column: 1 / span 5; grid-row: 1; }
 }
-.brand-sec--rox { --accent: #C26A2E; }
+.brand-sec--aito { --accent: #8C9BB0; }
 
 .model-grid {
   display: grid;
@@ -419,6 +419,7 @@
   padding: .35rem .6rem; background: rgba(14, 13, 11, .7); color: var(--silk);
   text-transform: none; letter-spacing: .02em;
 }
-/* tmavé PNG logo DFSK má kolem sebe prázdný okraj – opticky srovnat s logem ROX */
+/* tmavé PNG logo DFSK má kolem sebe prázdný okraj – opticky srovnat s logem AITO */
+.brand-sec--aito .brand-sec__logo { height: clamp(22px, 1rem + 1.1vw, 36px); }
 .brand-sec--dfsk .brand-sec__logo { height: clamp(44px, 2.2rem + 2.4vw, 80px); margin-left: -.6rem; }
 .photo-note--hero { left: auto; right: calc(var(--gutter) + var(--safe-r)); bottom: calc(1rem + var(--safe-b)); }
