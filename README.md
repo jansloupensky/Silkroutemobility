@@ -28,7 +28,8 @@ Totéž přes npm: `npm run build`, `npm run serve`, `npm run check`, `npm run s
 
 - `dist/index.html`, `aito.html`, `dfsk.html`, `kontakt.html`, `404.html`, `ochrana-osobnich-udaju.html`
 - složky `sk/`, `en/`, `assets/`
-- `sitemap.xml`, `robots.txt`, `llms.txt` (+ `sk/llms.txt`, `en/llms.txt`), `site.webmanifest`, `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `og-image.jpg`
+- `sitemap.xml`, `robots.txt`, `llms.txt` (+ `sk/llms.txt`, `en/llms.txt`), `site.webmanifest`, `favicon.ico`, `favicon.svg`, `favicon-16x16.png`, `favicon-32x32.png`, `favicon-48x48.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `maskable-icon-512x512.png`, `og-image.png`
+- složka `email/` (logo pro e-mailový podpis: `/email/silkroute-podpis-logo.png`)
 - **skrytý soubor `.htaccess`**. Ve FTP klientovi zapněte zobrazení skrytých souborů (FileZilla: Server → Vynutit zobrazení skrytých souborů).
 
 Při každé změně: upravit soubory v `src/`, spustit `node build.js` a znovu nahrát `dist/`.
@@ -44,7 +45,8 @@ Soubory CSS a JS mají v názvu otisk (např. `main.644d1272.css`), takže star�
 | Modely, ceny, technické údaje | `src/data/site.json` → `models` |
 | Texty webu (CZ / SK / EN) | `src/i18n/cs.json`, `sk.json`, `en.json` |
 | Seznam obrázků a jejich rozměry | `src/data/images.json` |
-| Barvy, písma, rozměry | `src/css/base.css` (proměnné v `:root`) |
+| Barvy, písma, rozměry | `src/css/base.css` (proměnné v `:root`, brand tokeny `--sr-*`) |
+| Loga Silkroute Mobility | `src/assets/brand/` (SVG z brand balíčku, neupravovat), vkládá `src/templates/partials/logo.html`, `header.html`, `footer.html`, `preloader.html` |
 
 **Ceny:**
 - `priceFrom` je cena v Kč pro českou verzi, `priceFromEur` je cena v € pro slovenskou verzi.
@@ -93,7 +95,12 @@ Počet fotek v galerii se mění v `src/data/images.json`. Přidejte řádek `ga
 
 **Hero video** (volitelné): `src/assets/video/home-hero.webm` + `home-hero.mp4`, smyčka 10–20 s, bez zvuku, do ~3 MB, 1920 × 1080. Přehrává se jen na počítači. Na mobilu a v úsporném režimu zůstane fotka `home-hero.jpg`, ta slouží i jako poster.
 
-**Loga:** logo Silk Route Mobility je **dočasné** (typografický logotyp v `src/templates/partials/logo.html`, favicon v `src/root/favicon.svg`). Ikony a `og-image.jpg` v `src/root/` po dodání finálního loga vyměňte.
+**Loga:** logo **Silkroute Mobility by MIEX** je finální (brand lookbook v1, listopad 2026).
+- SVG soubory jsou v `src/assets/brand/` beze změny z balíčku (text v křivkách). Vkládají se jako `<img>`, nikdy je nepřekreslujte ani neupravujte.
+- Hlavička: jednořádkové logo s podpisem (`silkroute-oneline-by-color-on-dark.svg`), na mobilu bez podpisu (`silkroute-oneline-color-on-dark.svg`), stejně v mobilním menu. Patička a preloader: horizontální logo (`silkroute-horizontal-color-on-dark.svg`). Varianty `on-light` jsou připravené pro světlé pozadí.
+- Pravidla z lookbooku: ochranná zóna aspoň výška písmene „M“, minimální šířka horizontálního loga 120 px, jednořádkového 140 px, symbolu 16 px.
+- 3D chromové S v hero úvodní stránky: `silkroute-mark-3d-chrome-*.webp` (převod PNG z balíčku do menších velikostí) a původní PNG jako záloha.
+- Favicony, ikony aplikace, `site.webmanifest` a `og-image.png` v `src/root/` jsou z balíčku (`02_favicon/`).
 - **AITO:** oficiální SVG z aitoauto.com, vložené přímo do stránky v `src/templates/partials/brand-logo.html`. Barvu přebírá z okolního textu.
 - **DFSK:** bílé PNG z dfskcars.cz (`src/assets/img/logo-dfsk.png`, 304 × 55 px). Je malé, takže na displejích s vysokým rozlišením je trochu měkké. Doporučujeme vyžádat si od výrobce vektorové logo (SVG) a vyměnit ho.
 
@@ -140,7 +147,8 @@ K ověření:
 
 ### Obsah
 - [ ] všechny fotky ze seznamu výše + případně hero video
-- [ ] oficiální logo Silk Route Mobility a loga AITO / DFSK
+- [x] oficiální logo Silkroute Mobility (dodáno, listopad 2026)
+- [ ] vektorová loga AITO / DFSK
 - [ ] přečíst a schválit texty ve všech třech jazycích. Hlavně tvrzení, která jsme odhadli: asistence 24/7, originální díly přímo od výrobce, servis i pneuservis na stejné adrese jako showroom.
 - [ ] ochrana osobních údajů: nechat zkontrolovat právníkem (teď základní text pro web bez cookies a formulářů)
 
@@ -150,8 +158,8 @@ K ověření:
 - Názvy souborů jsou ve všech jazycích stejné (`/sk/kontakt.html`, `/en/aito.html`).
 - Pohon modelu je v `site.json` uložený jako kód (`petrol`, `phev`), aby šel přeložit. Hodnoty a překlady jsou v `i18n/*.json` → `powertrain`.
 - Schema.org: `AutoDealer` + `Organization` s českou adresou a `areaServed` CZ a SK. Je na úvodní a kontaktní stránce.
-- Akcenty značek: AITO chladná šedomodrá, DFSK ocelově šedá. Obojí jen v drobných detailech.
-- Pro text na světlém pozadí jsou tmavší odstíny `--sand-deep` a `--copper-deep`. Původní `--sand` a `--copper` by na světlé ploše nesplnily kontrast WCAG AA.
+- Barvy podle identity: graphite `#1E1F22` (hlavní plocha), asphalt `#2C2D31`, steel `#8E949C`, chrome `#D6D9DE`, silk `#F4F4F2`, gold `#E9B46A` (jediný akcent, max. ~5 % plochy). Akcent sekce AITO je ocelový.
+- Zlatá ani ocelová se na světlém pozadí nepoužívají pro text (nesplnily by kontrast WCAG AA). Akcent textu je tam graphite, doplňkový text `#62676F` (tmavý stop ocelového přechodu značky, 5,2 : 1).
 
 ---
 
@@ -190,9 +198,9 @@ src/i18n/              cs.json, sk.json, en.json
 src/data/              site.json, images.json
 src/css/               fonts, base, layout, components, sections, animations
 src/js/                main.js + modules/ (build je spojí do jednoho souboru)
-src/assets/            img/, video/, fonts/ (WOFF2, OFL licence)
+src/assets/            img/, video/, fonts/ (Inter WOFF2, OFL licence), brand/ (loga a 3D symbol Silkroute)
 src/vendor/            GSAP 3.15 (+ ScrollTrigger, SplitText), Lenis 1.3 – lokálně, žádné CDN
-src/root/              soubory do kořene webu (.htaccess, ikony, manifest, og-image)
+src/root/              soubory do kořene webu (.htaccess, favicony, manifest, og-image, email/)
 ```
 
 **`.htaccess`:**
@@ -217,7 +225,7 @@ src/root/              soubory do kořene webu (.htaccess, ikony, manifest, og-i
   - Stránky 404 mají SEO 63, protože jsou záměrně `noindex` a vrací stav 404. Tak to má být.
 - **Odkazy:** interní odkazy a kotvy fungují. Přepínač jazyků vede vždy na stejnou stránku v jiném jazyce. `tel:` a `mailto:` odpovídají `site.json`. Web nedělá žádné externí požadavky.
 
-**Ověřené písmo:** Archivo (variabilní, osy wght a wdth), IBM Plex Sans a IBM Plex Mono v subsetech latin + latin-ext. Obsahují všechny znaky české a slovenské diakritiky (ě š č ř ž ý á í é ů ú ň ť ď ľ ĺ ŕ ô ä).
+**Ověřené písmo:** Inter (písmo značky, Google Fonts, OFL), variabilní 400–700, hostované lokálně v subsetech latin + latin-ext. Obsahují všechny znaky české a slovenské diakritiky (ě š č ř ž ý á í é ů ú ň ť ď ľ ĺ ŕ ô ä).
 
 ---
 
