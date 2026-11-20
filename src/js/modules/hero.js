@@ -72,7 +72,7 @@ SRM.hero = function (delay) {
   if (content) tl.to(content, { yPercent: -45, ease: 'none' }, 0);
   var dim = document.createElement('div');
   dim.className = 'hero__dim';
-  dim.style.cssText = 'position:absolute;inset:0;background:#0E0D0B;opacity:0;pointer-events:none;z-index:-1';
+  dim.style.cssText = 'position:absolute;inset:0;background:#1E1F22;opacity:0;pointer-events:none;z-index:-1';
   hero.appendChild(dim);
   tl.to(dim, { opacity: 0.7, ease: 'none' }, 0);
 };

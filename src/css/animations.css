@@ -25,23 +25,13 @@
   /* pojistka, kdyby JS selhal */
   animation: srm-hide 0s 3s forwards;
 }
-.preloader__panel { position: absolute; top: 0; bottom: 0; width: 50.5%; background: var(--ink); }
+.preloader__panel { position: absolute; top: 0; bottom: 0; width: 50.5%; background: var(--graphite); }
 .preloader__panel--l { left: 0; }
 .preloader__panel--r { right: 0; }
 .preloader__inner { position: relative; display: grid; justify-items: center; gap: 1.25rem; text-align: center; }
-.preloader__mark { width: 88px; height: 88px; color: var(--copper); }
-.preloader__mark path { stroke-dasharray: 1; stroke-dashoffset: 1; }
-.preloader__mark circle { opacity: 0; }
-.preloader__name {
-  font-family: var(--f-display);
-  font-stretch: 125%;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  font-size: .95rem;
-}
-.preloader__name span { font-weight: 400; color: var(--sand); }
-.preloader__count { color: var(--sand); }
+/* horizontální logo na tmavém (790 × 302), min. 120 px – tady 200–300 px; JS ho odkryje maskou zleva */
+.preloader__logo { display: block; width: clamp(200px, 12rem + 8vw, 300px); height: auto; }
+.preloader__count { color: var(--steel); }
 
 .no-js .preloader,
 .is-returning .preloader { display: none; }
@@ -65,8 +55,8 @@
 
 }
 .split-mask { display: inline-block; overflow: clip; vertical-align: top; padding-block: .06em; margin-block: -.06em; }
-/* maska SplitText nesmí uříznout diakritiku nad velkými písmeny (Ý, Š, Č …) */
-.split-word-mask { padding-top: .28em; margin-top: -.28em; padding-bottom: .08em; margin-bottom: -.08em; }
+/* maska SplitText nesmí uříznout diakritiku nad velkými písmeny (Ý, Š, Č …) ani dotahy (p, j, y) */
+.split-word-mask { padding-top: .28em; margin-top: -.28em; padding-bottom: .24em; margin-bottom: -.24em; }
 
 /* ---------------------------------------------------- přechody stránek */
 .curtain { display: none; }
@@ -75,7 +65,7 @@
   position: fixed;
   inset: 0;
   z-index: 950;
-  background: var(--ink);
+  background: var(--graphite);
   pointer-events: none;
   opacity: 0;
   transition: opacity .45s var(--ease-out);
