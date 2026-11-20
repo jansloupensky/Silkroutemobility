@@ -31,18 +31,18 @@
 }
 .hero .ph__label, .brand-hero .ph__label { top: calc(var(--header-h) + 1rem); right: var(--gutter); left: auto; bottom: auto; }
 
-/* 3D chromové S (brand) – vpravo nahoře ve volném prostoru nad nadpisem, nikdy nepřekrývá text */
+/* 3D chromové S (brand) – v toku obsahu nad nadpisem, zarovnané vpravo, takže nikdy nepřekryje text
+   (ani na nízkých displejích notebooků). Velikost podle šířky i výšky okna. */
 .hero__mark {
-  position: absolute;
-  z-index: 0;
-  top: calc(var(--header-h) + clamp(1rem, 4vh, 3rem));
-  right: calc(var(--gutter) + var(--safe-r));
-  width: min(30vw, 22svh);
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: min(30vw, 20svh);
+  margin-bottom: clamp(1rem, 4svh, 3rem);
   pointer-events: none;
 }
 .hero__mark img { width: 100%; height: auto; filter: drop-shadow(0 24px 32px rgba(30, 31, 34, .55)); }
 @media (min-width: 1024px) {
-  .hero__mark { width: min(19vw, 30svh); right: calc(var(--gutter) + var(--safe-r) + 3vw); }
+  .hero__mark { width: min(18vw, 24svh, 320px); margin-right: 2vw; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .js .hero__mark { animation: srm-mark-in 1.6s var(--ease-expo) .6s both; }
