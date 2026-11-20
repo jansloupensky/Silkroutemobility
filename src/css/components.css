@@ -403,6 +403,7 @@ html.menu-open { overflow: hidden; }
    Šířka min. 200 px (lookbook: min. 120 px), okolní rozestupy výrazně větší než výška „M“. */
 .site-footer__logo {
   margin-top: clamp(3.5rem, 2rem + 6vw, 8rem);
+  margin-bottom: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
 }
 .site-footer__logo img {
   display: block;

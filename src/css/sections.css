@@ -276,7 +276,7 @@
 .brand-hero__media { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
 .brand-hero__media .ph, .brand-hero__media .pic { height: 100%; aspect-ratio: auto !important; }
 .brand-hero__content { row-gap: 1rem; }
-.brand-hero__kicker { color: var(--steel); }
+.brand-hero__kicker { color: var(--chrome); }
 .brand-hero__title {
   font-family: var(--f-display);
   font-weight: 700;
