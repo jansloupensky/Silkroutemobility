@@ -347,7 +347,7 @@
 .spec-table th, .spec-table td { padding: .8rem 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: baseline; }
 .spec-table tr:first-child th, .spec-table tr:first-child td { border-top: 1px solid var(--rule); }
 .spec-table th { font-weight: 400; color: var(--fg-2); width: 48%; padding-right: 1rem; }
-.spec-table td { text-transform: none; }
+.spec-table td { text-transform: none; letter-spacing: .01em; }
 .model-detail__price { margin-top: 2.5rem; }
 .model-detail__price > .mono:first-child { color: var(--fg-2); margin-bottom: .25rem; }
 @media (min-width: 768px) {
