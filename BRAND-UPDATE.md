@@ -19,7 +19,7 @@ Větev: `brand/silkroute-identity`. Zdroj podkladů: brand balíček (lookbook v
 | Soubor | Změna |
 |---|---|
 | `.gitignore` | `_brand-silkroute/` – podklady se nikdy necommitují |
-| `src/assets/brand/` (nové) | SVG loga z balíčku beze změny (oneline-by on-dark, oneline on-dark, horizontal on-dark, stacked on-dark a světlé/jednobarevné varianty pro budoucí použití) + 3D chromové S |
+| `src/assets/brand/` (nové) | SVG loga z balíčku beze změny: oneline-by, oneline, horizontal a mark, každé ve variantě color-on-dark a color-on-light (on-light pro budoucí světlé plochy). Vertikální a jednobarevné verze web nepotřebuje, zůstávají v balíčku. + 3D chromové S (PNG + WebP převody) |
 | `src/root/` | favicony z `02_favicon/` (`favicon.ico`, `favicon.svg`, `favicon-16/32/48`, `apple-touch-icon.png`, `android-chrome-192/512`, `maskable-icon-512`), `og-image.png`, `site.webmanifest` dle balíčku; staré ikony a `og-image.jpg` pryč; `email/silkroute-podpis-logo.png` |
 | `build.js` | kopírování `assets/brand/`, Schema.org logo → `android-chrome-512x512.png`, obrázek → `og-image.png`, odstranění hlášky „logo je dočasné“ |
 | `src/root/.htaccess` | MIME typ pro `.ico` |
