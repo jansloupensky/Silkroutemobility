@@ -76,6 +76,7 @@ ErrorDocument 404 /404.html
   AddType video/webm .webm
   AddType video/mp4 .mp4
   AddType application/manifest+json .webmanifest
+  AddType image/x-icon .ico
   AddCharset utf-8 .html .css .js .xml .txt .md .webmanifest .svg
 </IfModule>
 
@@ -113,6 +114,7 @@ ErrorDocument 404 /404.html
   ExpiresByType image/webp "access plus 1 week"
   ExpiresByType image/jpeg "access plus 1 week"
   ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 week"
   ExpiresByType image/svg+xml "access plus 1 week"
   ExpiresByType video/mp4 "access plus 1 week"
   ExpiresByType video/webm "access plus 1 week"

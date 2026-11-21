@@ -1,4 +1,4 @@
-// Preloader (max. 1,5 s): logo se vykreslí tahem, počítadlo 0–100, obrazovka se rozdělí a odjede nahoru.
+// Preloader (max. 1,5 s): logo Silkroute Mobility se odkryje maskou, počítadlo 0–100, obrazovka se rozdělí a odjede nahoru.
 // Při další návštěvě ve stejné relaci se přeskočí (třída is-returning nastavená v <head>).
 SRM.preloader = function (onDone) {
   var el = document.querySelector('[data-preloader]');
@@ -17,9 +17,10 @@ SRM.preloader = function (onDone) {
     defaults: { ease: 'power3.out' },
     onComplete: function () { el.style.display = 'none'; }
   });
-  tl.to(el.querySelector('[data-preloader-path]'), { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 0)
-    .to(el.querySelector('[data-preloader-start]'), { opacity: 1, duration: 0.2 }, 0)
-    .to(el.querySelector('[data-preloader-end]'), { opacity: 1, duration: 0.2 }, 0.75)
+  // logo se nemění, jen se odkryje maskou zleva doprava
+  tl.fromTo(el.querySelector('[data-preloader-logo]'),
+      { clipPath: 'inset(0% 100% 0% 0%)', opacity: 0.4 },
+      { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1, duration: 0.85, ease: 'power2.inOut' }, 0)
     .to(obj, {
       v: 100, duration: 0.9, ease: 'power2.inOut',
       onUpdate: function () { count.textContent = String(Math.round(obj.v)).padStart(3, '0'); }

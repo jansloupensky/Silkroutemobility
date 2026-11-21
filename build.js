@@ -221,6 +221,8 @@ function buildStatic() {
   copyDir(path.join(SRC, 'assets/img'), path.join(DIST, 'assets/img'));
   copyDir(path.join(SRC, 'assets/video'), path.join(DIST, 'assets/video'));
   copyDir(path.join(SRC, 'assets/svg'), path.join(DIST, 'assets/svg'));
+  // loga a 3D symbol Silkroute Mobility z brand balíčku (SVG se nemění, jen vkládají)
+  copyDir(path.join(SRC, 'assets/brand'), path.join(DIST, 'assets/brand'));
   // soubory pro kořen webu (favicony, manifest, .htaccess)
   copyDir(path.join(SRC, 'root'), DIST);
   const ht = path.join(SRC, 'root/.htaccess');
@@ -395,7 +397,7 @@ function schemaJSON(lang, page) {
       name: c.name,
       legalName: c.name,
       url: base + '/',
-      logo: `${base}/icon-512.png`,
+      logo: `${base}/android-chrome-512x512.png`,
       email: c.email,
       telephone: c.phone,
       address,
@@ -409,7 +411,7 @@ function schemaJSON(lang, page) {
       name: t.meta.siteName,
       description: t.schema.description,
       url: base + urlFor('index', lang),
-      image: `${base}/og-image.jpg`,
+      image: `${base}/og-image.png`,
       telephone: c.phone,
       email: c.email,
       address,
@@ -695,7 +697,6 @@ function readiness() {
     if (!findImageFiles(im.file).length) out.push(`obrázek ${im.file} chybí (zobrazuje se zástupná plocha)`);
     if (im.temporary) out.push(`obrázek ${im.file}: ${im.temporary}`);
   }
-  out.push('logo Silk Route Mobility je dočasné (src/templates/partials/logo.html, src/root/favicon.svg, ikony, og-image.jpg)');
   return out;
 }
 

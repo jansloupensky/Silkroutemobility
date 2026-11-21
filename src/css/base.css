@@ -1,46 +1,64 @@
 /* ==========================================================================
    BASE – design tokeny, reset, typografie
-   Mobile-first. Kontrasty ověřené (WCAG AA):
-     silk/ink 15.7 · sand/ink 8.4 · copper/ink 5.0
-     ink/silk 15.7 · sand-deep/silk 5.1 · copper-deep/silk 4.8
+   Identita Silkroute Mobility by MIEX (brand lookbook v1, 04_brand/brand-tokens.css).
+   Mobile-first. Kontrasty ověřené (WCAG AA, min. 4,5 : 1 pro text):
+     silk/graphite 15.0 · chrome/graphite 11.6 · steel/graphite 5.4 · gold/graphite 8.8
+     graphite/silk 15.0 · steel-deep/silk 5.2 · graphite/gold 8.8 (text hlavních tlačítek)
+   Zlatá a ocelová se NEPOUŽÍVAJÍ pro text na světlém pozadí (gold/silk 1.7, steel/silk 2.8).
    ========================================================================== */
 
 :root {
-  /* barvy */
-  --ink: #0E0D0B;
-  --ink-2: #1A1815;
-  --ink-3: #24211D;
-  --silk: #EDE6DA;
-  --silk-2: #E3DACB;
-  --sand: #B9A88C;
-  --sand-deep: #6B5E49;     /* sekundární text na světlém pozadí */
-  --copper: #C26A2E;        /* akcent – max. 5 % plochy */
-  --copper-deep: #9C4F1C;   /* akcent pro text na světlém pozadí */
-  --line: rgba(237, 230, 218, .14);
-  --line-strong: rgba(237, 230, 218, .28);
-  --line-ink: rgba(14, 13, 11, .16);
+  /* brand tokeny – Silkroute Mobility (hodnoty z brand-tokens.css, neměnit) */
+  --sr-graphite:   #1E1F22; /* primární tmavá – hlavní plocha, text na světlé */
+  --sr-asphalt:    #2C2D31; /* sekundární tmavá – karty, pruhy */
+  --sr-steel:      #8E949C; /* ocel – doplňkový text na tmavé, linky */
+  --sr-chrome:     #D6D9DE; /* chrom – světlé plochy a linky na tmavé */
+  --sr-silk:       #F4F4F2; /* hedvábná bílá – světlé pozadí */
+  --sr-white:      #FFFFFF;
+  --sr-gold:       #E9B46A; /* jediný akcent, max. ~5 % plochy */
+  --sr-gold-deep:  #C08A3E; /* jen netextové detaily na světlém pozadí */
+  --sr-chrome-gradient: linear-gradient(160deg, #FFFFFF 0%, #D6D9DE 22%, #8E949C 42%, #F3F4F6 56%, #A8ADB4 76%, #DADDE1 100%);
+  --sr-steel-gradient:  linear-gradient(160deg, #62676F 0%, #2A2C30 40%, #565B63 58%, #1E1F22 100%);
+  --sr-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* pracovní názvy používané ve stylech */
+  --graphite: var(--sr-graphite);
+  --asphalt: var(--sr-asphalt);
+  --steel: var(--sr-steel);
+  /* doplňkový text na světlém pozadí: tmavý stop ocelového přechodu ze značky (#62676F, 5,2 : 1 na silk);
+     samotná steel by na světlé ploše nesplnila kontrast 4,5 : 1 */
+  --steel-deep: #62676F;
+  --chrome: var(--sr-chrome);
+  --silk: var(--sr-silk);
+  --gold: var(--sr-gold);
+  --gold-deep: var(--sr-gold-deep);
+  /* jemné ocelové linky místo výrazných rámečků */
+  --line: rgba(142, 148, 156, .24);
+  --line-strong: rgba(142, 148, 156, .42);
+  --line-ink: rgba(30, 31, 34, .14);
 
   /* kontextové barvy (přepínají se třídou sekce) */
-  --bg: var(--ink);
+  --bg: var(--graphite);
   --fg: var(--silk);
-  --fg-2: var(--sand);
-  --accent: var(--copper);
+  --fg-2: var(--steel);
+  --accent: var(--gold);        /* akcent pro text a ikony */
+  --accent-deco: var(--gold);   /* akcent jen pro netextové detaily (linky, body) */
   --rule: var(--line);
 
-  /* písma */
-  --f-display: "Archivo", "Arial Narrow", Arial, sans-serif;
-  --f-text: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  /* písmo značky: Inter (nadpisy Bold, text Regular, štítky SemiBold verzálkami) */
+  --f-display: var(--sr-font);
+  --f-text: var(--sr-font);
+  --f-mono: var(--sr-font);
 
   /* typografická škála (fluidní) */
-  --fs-mono: clamp(.72rem, .68rem + .15vw, .8rem);
+  --fs-mono: clamp(.72rem, .69rem + .12vw, .78rem);
   --fs-small: clamp(.875rem, .85rem + .1vw, .9375rem);
   --fs-body: clamp(1rem, .96rem + .2vw, 1.125rem);
   --fs-lead: clamp(1.125rem, 1rem + .6vw, 1.5rem);
   --fs-h3: clamp(1.25rem, 1.1rem + .7vw, 1.75rem);
-  --fs-h2: clamp(1.6rem, .7rem + 4.4vw, 5.25rem);
-  --fs-h1: clamp(2.6rem, 1.4rem + 6vw, 8rem);
-  --fs-display: clamp(3rem, 1rem + 11vw, 17rem);
+  --fs-h2: clamp(1.75rem, .9rem + 3.6vw, 4.5rem);
+  --fs-h1: clamp(2.4rem, 1.4rem + 5vw, 6.5rem);
+  --fs-display: clamp(2.75rem, 1rem + 8vw, 11rem);
 
   /* rozvržení */
   --gutter: clamp(1rem, .5rem + 2.5vw, 2.5rem);
@@ -83,11 +101,12 @@ html {
 body {
   margin: 0;
   min-height: 100svh;
-  background: var(--ink);
+  background: var(--graphite);
   color: var(--silk);
   font-family: var(--f-text);
   font-size: var(--fs-body);
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.5;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -107,7 +126,7 @@ address { font-style: normal; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 a:hover { text-decoration-color: var(--accent); }
 
-::selection { background: var(--copper); color: var(--ink); }
+::selection { background: var(--gold); color: var(--graphite); }
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -123,47 +142,44 @@ main:focus { outline: none; }
 .display-2 {
   font-family: var(--f-display);
   font-weight: 700;
-  font-stretch: 125%;
-  text-transform: uppercase;
-  letter-spacing: -.01em;
-  line-height: .9;
+  letter-spacing: -.02em;
+  line-height: 1.05;
   overflow-wrap: break-word;
   hyphens: manual;
 }
 
 .display {
   font-size: var(--fs-display);
-  font-weight: 800;
-  line-height: .84;
-  letter-spacing: -.025em;
+  line-height: 1;
+  letter-spacing: -.02em;
 }
 .display-2 {
-  font-size: clamp(2.6rem, 1rem + 8vw, 11rem);
-  font-weight: 800;
-  line-height: .86;
+  font-size: clamp(2.4rem, 1rem + 6vw, 8rem);
+  line-height: 1;
   letter-spacing: -.02em;
 }
 .h1 { font-size: var(--fs-h1); }
 .h2 + p, .h2 + .lead { margin-top: clamp(1.25rem, .8rem + 1.5vw, 2.25rem); }
-.h2 { font-size: var(--fs-h2); line-height: .95; font-stretch: 112%; max-width: 18ch; text-wrap: balance; }
+.h2 { font-size: var(--fs-h2); line-height: 1.08; max-width: 18ch; text-wrap: balance; }
 .h3 {
   font-size: var(--fs-h3);
-  font-stretch: 112%;
-  line-height: 1.1;
-  letter-spacing: 0;
+  line-height: 1.2;
+  letter-spacing: -.01em;
 }
 
 .lead {
   font-size: var(--fs-lead);
   line-height: 1.45;
+  letter-spacing: -.005em;
   max-width: 38ch;
 }
 
+/* štítky („.mono“ = dříve neproporcionální písmo): podle lookbooku Inter, verzálky, prostrkání */
 .mono {
   font-family: var(--f-mono);
   font-size: var(--fs-mono);
-  font-weight: 400;
-  letter-spacing: .04em;
+  font-weight: 500;
+  letter-spacing: .08em;
   line-height: 1.5;
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
@@ -191,12 +207,13 @@ main:focus { outline: none; }
   top: .75rem; left: .75rem;
   z-index: 1000;
   padding: .75rem 1rem;
-  background: var(--silk);
-  color: var(--ink);
+  background: var(--gold);
+  color: var(--graphite);
   font-family: var(--f-mono);
   font-size: var(--fs-mono);
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .08em;
   transform: translateY(-200%);
 }
 .skip-link:focus-visible { transform: none; }

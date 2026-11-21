@@ -6,6 +6,11 @@
     <div class="hero__shade" data-hero-shade></div>
   </div>
   <div class="hero__content wrap grid" data-hero-content>
+    <!-- 3D chromové S ze značky (dekorace). WebP je jen převod původního PNG z brand balíčku do menších velikostí. -->
+    <picture class="hero__mark" aria-hidden="true">
+      <source type="image/webp" srcset="/assets/brand/silkroute-mark-3d-chrome-640.webp 640w, /assets/brand/silkroute-mark-3d-chrome-1120.webp 1120w, /assets/brand/silkroute-mark-3d-chrome-1682.webp 1682w" sizes="(min-width: 1024px) 18vw, 30vw">
+      <img src="/assets/brand/silkroute-mark-3d-chrome-transparent-2x.png" width="1682" height="1604" alt="" decoding="async">
+    </picture>
     <h1 class="hero__title display" data-hero-title>${t.home.hero.title}</h1>
     <p class="hero__sub" data-hero-sub>${t.home.hero.sub}</p>
   </div>

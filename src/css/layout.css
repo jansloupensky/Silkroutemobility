@@ -34,18 +34,22 @@
 }
 
 .sec--dark {
-  --bg: var(--ink);
+  --bg: var(--graphite);
   --fg: var(--silk);
-  --fg-2: var(--sand);
-  --accent: var(--copper);
+  --fg-2: var(--steel);
+  --accent: var(--gold);
+  --accent-deco: var(--gold);
   --rule: var(--line);
 }
 
+/* Světlá sekce: zlatá ani ocelová se nepoužívají pro text (kontrast). Akcent textu = graphite,
+   zlatá (gold-deep) jen u netextových detailů (linky, body). */
 .sec--light {
   --bg: var(--silk);
-  --fg: var(--ink);
-  --fg-2: var(--sand-deep);
-  --accent: var(--copper-deep);
+  --fg: var(--graphite);
+  --fg-2: var(--steel-deep);
+  --accent: var(--graphite);
+  --accent-deco: var(--gold-deep);
   --rule: var(--line-ink);
   color-scheme: light;
 }
